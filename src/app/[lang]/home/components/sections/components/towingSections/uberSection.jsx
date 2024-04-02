@@ -29,14 +29,16 @@ export const UberSection = () => {
             />
           </div>
         ) : (
-          <div className='relative h-full w-full bg-dark'>
-            <Image
-              src={UberTowing2}
-              fill
-              className='object-cover object-bottom'
-              alt='No Parking'
-            />
-            <div className='absolute right-0 z-[1] flex h-full flex-col justify-center text-2xl text-white max-md:w-full md:w-1/2'>
+          <div className='relative flex h-full w-full bg-dark'>
+            <div className='relative h-full w-1/2'>
+              <Image
+                src={UberTowing2}
+                fill
+                className='object-cover object-bottom max-lg:object-right'
+                alt='No Parking'
+              />
+            </div>
+            <div className='right-0 z-[1] flex h-full w-1/2 flex-col justify-center text-2xl text-white'>
               <div className='flex max-w-[650px] flex-col p-5'>
                 <span className='py-5 text-white/50'>
                   Easy to use app to fine wrong parkers.

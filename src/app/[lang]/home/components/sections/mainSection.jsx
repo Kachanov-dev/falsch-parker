@@ -8,6 +8,8 @@ import { Container } from '@/components/container/container';
 import { MainOpenAppShape } from '@/app/[lang]/home/components/sections/components/mainOpenAppShape';
 import MainBanner from '@/images/home-page/main-banner.png';
 import { useRouter } from 'next/navigation';
+import styles from './styles.module.scss';
+import cl from 'classnames';
 
 export const MainSection = ({ scrollTo }) => {
   const router = useRouter();
@@ -25,8 +27,8 @@ export const MainSection = ({ scrollTo }) => {
 
   return (
     <Container>
-      <div className='flex gap-5'>
-        <div className='relative w-full bg-light'>
+      <div className='flex gap-5 max-lg:flex-col'>
+        <div className='relative h-[795px] w-full bg-light max-lg:h-[540px]'>
           <MainOpenAppShape scrollTo={scrollTo} />
           <Image
             src={MainBanner}
@@ -35,13 +37,17 @@ export const MainSection = ({ scrollTo }) => {
             className='rounded-card object-cover'
           />
         </div>
-        <div className='flex flex-col gap-5'>
+        <div
+          className={cl(
+            styles.customGridCols,
+            'relative flex place-items-center gap-5 max-lg:grid max-lg:grid-cols-2 max-sm:grid-cols-1 lg:flex-col'
+          )}>
           <ParkingCard
             type='businessParking'
             onClick={gotToBusinessParking}
             text={
               <div className=''>
-                Wrong parkers on your{' '}
+                Wrong parkers on your <br />
                 <span className='rounded-md bg-light px-2 leading-10 text-black'>
                   business parking?
                 </span>
@@ -53,14 +59,13 @@ export const MainSection = ({ scrollTo }) => {
             onClick={gotToPrivateParking}
             text={
               <div>
-                Wrong parkers on your{' '}
+                Wrong parkers on your <br />
                 <span className='rounded-md bg-black px-2 leading-10 text-white'>
                   private parking?
                 </span>
               </div>
             }
           />
-
           <ParkingCardApp
             onClick={gotToApp}
             text={

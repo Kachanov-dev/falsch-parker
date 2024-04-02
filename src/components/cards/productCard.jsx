@@ -27,9 +27,11 @@ export const ProductCard = ({ title, subtitle, type, className }) => {
   }
 
   return (
-    <div className='rounded-br-0 h-[680px] w-[440px] cursor-pointer overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card'>
-      <div className='group relative h-[680px] w-[440px] transform  rounded-card grayscale transition duration-500 ease-in-out hover:grayscale-0'>
-        <div className='absolute z-[2] p-10 text-5xl text-white'>{title}</div>
+    <div className='rounded-br-0 h-[680px] w-[440px] cursor-pointer overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card max-md:h-[580px] max-md:w-[328px]'>
+      <div className='group relative h-[680px] w-[440px] transform rounded-card  grayscale transition duration-500 ease-in-out hover:grayscale-0 max-md:h-[580px] max-md:w-[328px]'>
+        <div className='absolute z-[2] p-10 text-5xl text-white max-md:text-4xl'>
+          {title}
+        </div>
         <div className='relative h-[680px] w-[440px] '>
           <Image
             src={src}
@@ -38,7 +40,7 @@ export const ProductCard = ({ title, subtitle, type, className }) => {
             alt={alt}
           />
         </div>
-        <div className='absolute bottom-0 z-[2] p-10 pr-14 text-lg text-white/50 transition duration-500 ease-in-out group-hover:text-white'>
+        <div className='absolute bottom-0 z-[2] p-10 pr-14 text-lg text-white/50 transition duration-500 ease-in-out group-hover:text-white max-md:text-base'>
           {subtitle}
         </div>
 

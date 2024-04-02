@@ -11,7 +11,9 @@ export const TrustedBySection = () => {
           <SectionTitle title='Trusted by' />
         </div>
       </Container>
-      <InfiniteCarousel />
+      <div className='mt-3 flex items-center justify-center'>
+        <InfiniteCarousel />
+      </div>
     </div>
   );
 };
