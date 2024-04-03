@@ -1,6 +1,6 @@
 import React from 'react';
 import { PayFineButton } from '@/components/buttons/payFineButton';
-import { ContactUs } from '@/components/buttons/contactUs';
+import { ArrowDotButton } from '@/components/buttons/arrowDotButton';
 
 export const JoinSection = () => {
   return (
@@ -27,7 +27,7 @@ export const JoinSection = () => {
         <div className='flex items-center max-md:flex-col'>
           <div className='text-[240px] max-md:text-[144px]'>Join</div>
           <div className='flex h-full w-full items-end justify-end'>
-            <ContactUs />
+            <ArrowDotButton theme='light'>Contact us</ArrowDotButton>
           </div>
         </div>
       </div>

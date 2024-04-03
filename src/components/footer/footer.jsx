@@ -6,13 +6,13 @@ import { Facebook } from '@/components/icons/facebook';
 import { YouTube } from '@/components/icons/youtube';
 import { Twitter } from '@/components/icons/twitter';
 import { Instagram } from '@/components/icons/instagram';
-import { ContactUs } from '@/components/buttons/contactUs';
 import { FooterLink } from '@/components/footer/footerLink';
 import Link from 'next/link';
 import { AppButton } from '@/components/buttons/appButton';
 import { Apple } from '@/components/icons/apple';
 import { Android } from '@/components/icons/android';
 import { ScrollToTopButton } from '@/components/buttons/scrollToTopButton';
+import { ArrowDotButton } from '@/components/buttons/arrowDotButton';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -21,6 +21,7 @@ const Footer = () => {
       behavior: 'smooth',
     });
   };
+
   return (
     <div className='flex justify-center bg-dark px-10 py-20'>
       <div className='flex w-full max-w-container flex-col gap-[64px] text-white'>
@@ -34,7 +35,7 @@ const Footer = () => {
                 We’re here to help you to solve the problem
               </span>
             </div>
-            <ContactUs />
+            <ArrowDotButton theme='light'>Contact us</ArrowDotButton>
             <div className='flex flex-col gap-1'>
               <span className='text-xl font-light opacity-50'>
                 Or just give us a call.
