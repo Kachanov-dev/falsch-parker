@@ -15,7 +15,10 @@ export const Post = defineType({
       title: 'Post unique identifier',
       name: 'slug',
       type: 'slug',
-      validation: (rule) => rule.required(),
+      validation: (rule) =>
+        rule.required().custom((slug) => {
+          return /\s/.test(slug.current) ? 'Slug cannot contain spaces' : true;
+        }),
       options: {
         source: 'title',
       },
@@ -34,7 +37,7 @@ export const Post = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      title: 'post cover image',
+      title: 'Post cover image',
       name: 'cover',
       type: 'image',
       validation: (rule) => rule.required(),
@@ -49,7 +52,24 @@ export const Post = defineType({
       title: 'Post content',
       name: 'content',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        {
+          type: 'block',
+          styles: [
+            {
+              title: 'Normal',
+              value: 'normal',
+            },
+            {
+              title: 'Heading',
+              value: 'h5',
+            },
+          ],
+          marks: {
+            decorators: [],
+          },
+        },
+      ],
       options: {
         validation: (rule) => rule.required(),
       },

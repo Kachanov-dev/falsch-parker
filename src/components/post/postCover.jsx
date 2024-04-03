@@ -4,6 +4,7 @@ import { ArrowRight } from '@/components/icons/arrowRight';
 import { Chip } from '@/components/chips/chip';
 import { RoundButton } from '@/components/buttons/roundButton';
 import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { ArrowDown } from '@/components/icons/arrowDown';
 
 const PostCover = ({
   imageUrl,
@@ -11,9 +12,9 @@ const PostCover = ({
   time,
   title,
   synopsis,
-  slug,
-  lang,
   height = 730,
+  href,
+  scroll,
 }) => {
   return (
     <div className='relative overflow-hidden'>
@@ -34,9 +35,13 @@ const PostCover = ({
       </div>
       <CornerButtonContainer>
         <RoundButton
-          href={`/${lang}/blog/${slug}`}
-          icon={ArrowRight}
-          animation='group-hover:-rotate-45 group-hover:scale-125'
+          href={href}
+          icon={scroll ? ArrowDown : ArrowRight}
+          animation={
+            scroll
+              ? 'group-hover:translate-y-1 group-hover:scale-125'
+              : 'group-hover:-rotate-45 group-hover:scale-125'
+          }
         />
       </CornerButtonContainer>
     </div>

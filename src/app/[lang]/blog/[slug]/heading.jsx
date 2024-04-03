@@ -15,7 +15,7 @@ const Heading = ({ post, lang }) => {
         </Chip>
       </div>
       <div>
-        <PostCover {...post} height={700} lang={lang} />
+        <PostCover {...post} height={700} scroll />
       </div>
     </div>
   );
