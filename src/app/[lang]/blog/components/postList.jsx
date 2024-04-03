@@ -1,18 +1,11 @@
 import React from 'react';
-import { Post } from '.';
+import { PostCover } from '@/components/post/postCover';
 
-const PostList = ({ posts }) => {
+const PostList = ({ posts, lang }) => {
   return (
     <div className='mt-10 grid grid-cols-2 gap-5'>
       {posts.map((post) => (
-        <Post
-          key={post.id}
-          imageSrc={post.imageUrl}
-          tag={post.tag}
-          time={post.time}
-          title={post.title}
-          description={post.description}
-        />
+        <PostCover key={post.slug} {...post} lang={lang} />
       ))}
     </div>
   );

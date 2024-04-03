@@ -9,7 +9,7 @@ const Input = ({ placeholder }) => {
         className='h-full w-full bg-light px-6 text-base focus:outline-0'
         placeholder={placeholder}
       />
-      <button className='group relative flex h-full min-w-[133px] items-center justify-center overflow-hidden rounded-full bg-dark font-light text-light transition-colors duration-300 hover:bg-light'>
+      <button className='group relative flex h-full min-w-[140px] items-center justify-center overflow-hidden rounded-full bg-dark font-light text-light transition-colors duration-300 hover:bg-light'>
         <div className='flex items-center'>
           <ArrowRight className='absolute left-0 -translate-x-full transition-transform duration-300 group-hover:translate-x-4 group-hover:text-black' />
           <span className='transition-all duration-300 group-hover:translate-x-5 group-hover:text-black'>

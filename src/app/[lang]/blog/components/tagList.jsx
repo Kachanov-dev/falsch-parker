@@ -1,23 +1,25 @@
 import React from 'react';
-import { Chip } from '@/app/[lang]/blog/components/chip';
 import { buildBlogPagingHref } from '@/utils/utils';
+import { Chip } from '@/components/chips/chip';
 
 const TagList = ({ tags, activeTag }) => {
   return (
     <div className='flex gap-2'>
       <Chip
+        dark
         key='all'
-        text='All'
         active={!activeTag}
-        href={buildBlogPagingHref(1)}
-      />
+        href={activeTag ? buildBlogPagingHref(1) : ''}>
+        All
+      </Chip>
       {tags.map((tag) => (
         <Chip
+          dark
           key={tag}
-          text={tag}
           active={tag === activeTag}
-          href={buildBlogPagingHref(1, tag)}
-        />
+          href={tag !== activeTag ? buildBlogPagingHref(1, tag) : ''}>
+          {tag}
+        </Chip>
       ))}
     </div>
   );

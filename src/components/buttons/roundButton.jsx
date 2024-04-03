@@ -1,15 +1,21 @@
-'use client';
-
 import React from 'react';
-import { ArrowUp } from '@/components/icons/arrowUp';
+import Link from 'next/link';
+import cl from 'classnames';
 
-const RoundButton = ({ onClick }) => {
+const RoundButton = ({ icon, href, animation, onClick }) => {
+  const Icon = icon;
   return (
-    <button
+    <Link
       onClick={onClick}
-      className='group flex h-[52px] w-[52px] items-center justify-center rounded-full border border-white bg-dark transition-colors duration-300 hover:bg-light'>
-      <ArrowUp className='transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-125 group-hover:text-black' />
-    </button>
+      href={href}
+      className='group flex h-12 w-12 items-center justify-center rounded-full bg-dark'>
+      <Icon
+        className={cl(
+          'text-light transition-transform duration-300',
+          animation
+        )}
+      />
+    </Link>
   );
 };
 

@@ -9,7 +9,7 @@ import { buildGetPostsQuery, buildGetTagsQuery } from '@/utils/queries';
 
 const limit = +process.env.POSTS_ON_PAGE;
 
-const BlogPage = async ({ searchParams }) => {
+const BlogPage = async ({ searchParams, params: { lang } }) => {
   const { page = 1, tag = '' } = searchParams;
   const { posts, total } = await client
     .fetch(buildGetPostsQuery(tag, (+page - 1) * limit, limit))
@@ -23,7 +23,7 @@ const BlogPage = async ({ searchParams }) => {
     <Container>
       <div className='my-20 flex flex-col gap-20'>
         <Heading />
-        <Posts activeTag={tag} tags={tags} posts={posts} />
+        <Posts activeTag={tag} tags={tags} posts={posts} lang={lang} />
         <Paging page={+page} lastPage={Math.ceil(total / limit)} tag={tag} />
       </div>
     </Container>
@@ -33,7 +33,7 @@ const BlogPage = async ({ searchParams }) => {
 export default BlogPage;
 
 // returns page per each request without caching
-// export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 
 // revalidates whole route in N seconds
-export const revalidate = 30;
+// export const revalidate = 30;

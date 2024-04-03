@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { RoundButton } from '@/components/buttons/roundButton';
 import { SocialButton } from '@/components/buttons/socialButton';
 import { Facebook } from '@/components/icons/facebook';
 import { YouTube } from '@/components/icons/youtube';
@@ -13,6 +12,7 @@ import Link from 'next/link';
 import { AppButton } from '@/components/buttons/appButton';
 import { Apple } from '@/components/icons/apple';
 import { Android } from '@/components/icons/android';
+import { ScrollToTopButton } from '@/components/buttons/scrollToTopButton';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -22,8 +22,8 @@ const Footer = () => {
     });
   };
   return (
-    <div className='bg-dark flex justify-center px-10 py-20'>
-      <div className='max-w-container flex w-full flex-col gap-[64px] text-white'>
+    <div className='flex justify-center bg-dark px-10 py-20'>
+      <div className='flex w-full max-w-container flex-col gap-[64px] text-white'>
         <div className='flex justify-between gap-24'>
           <div className='flex flex-col gap-12'>
             <div className='flex flex-col gap-8'>
@@ -120,7 +120,7 @@ const Footer = () => {
           <span className='text-sm opacity-50'>
             Copyright © 2024 | All rights reserved
           </span>
-          <RoundButton onClick={scrollToTop} />
+          <ScrollToTopButton onClick={scrollToTop} />
         </div>
       </div>
     </div>

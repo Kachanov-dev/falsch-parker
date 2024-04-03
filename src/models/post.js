@@ -5,9 +5,11 @@ class Post {
     this.id = post._id;
     this.title = post.title;
     this.time = post.time;
-    this.description = post.description;
+    this.synopsis = post.synopsis;
     this.tag = post.tag;
     this.imageUrl = urlForImage(post.cover);
+    this.slug = post.slug.current;
+    this.content = post.content ?? null;
   }
 }
 

@@ -1,22 +1,13 @@
-import local from 'next/font/local';
 import Header from '@/components/header/header';
 import { locales } from '@/app/i18n/settings';
-import '../globals.scss';
 import { Footer } from '@/components/footer/footer';
+import { Poppins } from 'next/font/google';
 
-const cygre = local({
-  src: [
-    {
-      path: '../../../public/fonts/Cygre-Medium.ttf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../../public/fonts/Cygre-Book.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-  ],
+import '../globals.scss';
+
+const poppins = Poppins({
+  weight: ['300', '400', '500', '600'],
+  subsets: ['latin'],
 });
 
 export const metadata = {
@@ -31,7 +22,7 @@ export const generateStaticParams = () => {
 const RootLayout = ({ children, params: { lang } }) => {
   return (
     <html lang={lang}>
-      <body className={cygre.className}>
+      <body className={poppins.className}>
         <Header lang={lang} />
         <main className='mt-[75px]'>{children}</main>
         <Footer />
