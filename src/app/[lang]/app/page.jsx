@@ -7,6 +7,7 @@ import PortfolioIcon from '@/images/app-page/icons/portfolio.svg';
 import { NoParking } from '@/components/noParking/noParking';
 import { Claim } from '@/components/claim/claim';
 import { CCTVAi } from '@/components/cctv/cctvAi';
+import { HowItWorksSection } from '@/app/[lang]/home/components/sections/components/towingSections/howItWorksSection';
 
 const Page = () => {
   return (
