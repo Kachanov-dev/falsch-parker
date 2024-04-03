@@ -11,7 +11,8 @@ const ArrowDotButton = ({ href, onClick, children, theme = 'dark' }) => {
 
   const colors = {
     dark: 'border-dark text-dark bg-transparent hover:bg-dark hover:text-white',
-    light: 'border-white text-white bg-dark hover:bg-white hover:text-dark',
+    light:
+      'border-white text-white bg-transparent hover:bg-white hover:text-dark',
     green: 'border-0 text-white bg-green hover:bg-dark hover:text-white',
     subscribe:
       'border-0 bg-dark text-white hover:bg-transparent hover:text-dark',

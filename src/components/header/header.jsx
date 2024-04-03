@@ -72,8 +72,8 @@ const Header = ({ lang }) => {
                 </button>
               </div>
             </div>
-            <div className='max-lg:hidden lg:block'>
-              <PayFineButton text='Pay fine' />
+            <div className='shrink-0 max-lg:hidden'>
+              <PayFineButton />
             </div>
           </div>
         </Container>
