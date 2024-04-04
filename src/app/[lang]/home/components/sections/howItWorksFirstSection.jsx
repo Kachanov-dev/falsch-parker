@@ -1,88 +1,144 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image';
 import { Container } from '@/components/container/container';
-import { RoundButton } from '@/components/buttons/roundButton';
-import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
-import { ArrowRight } from '@/components/icons/arrowRight';
 import { CornerToggleContainer } from '@/components/buttons/cornerToggleContainer';
+import MobileParkingCar from '@/images/home-page/mobil-parking-car.png';
+import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRightShapeButton';
+import { CrossShapeButton } from '@/components/buttons/shapeButtons/crossShapeButton';
+import { ArrowLeftShapeButton } from '@/components/buttons/shapeButtons/arrowLeftShapeButton';
+
+const RenderImageBlock = () => {
+  return (
+    <div className='relative h-full w-1/2 max-md:w-full max-md:pl-0'>
+      <Image
+        src={MobileParkingCar}
+        fill
+        alt='No Parking'
+        className='ml-[16%] mt-[10%] object-contain max-md:ml-[15%] max-md:mt-[5%] max-sm:ml-[20%]'
+      />
+    </div>
+  );
+};
+
+const RenderTextBlock = (isOnlyApp) => {
+  return (
+    <div className='flex h-[760px] w-1/2 items-center justify-center max-md:h-[580px] max-md:w-full'>
+      <div className='w-full px-5 md:max-w-[530px]'>
+        <div className='flex justify-between py-5 text-2xl max-md:text-xl'>
+          <span className='text-dark'>Take a picture of wrong parker.</span>
+          <span className='ml-5 text-dark/50'>01</span>
+        </div>
+        <div className='flex items-center justify-between border-y-[1px] border-dark/10 py-5 text-2xl max-md:text-xl'>
+          <span className='text-dark'>
+            {isOnlyApp
+              ? 'Check that illegal parking situation is well documented.'
+              : 'Scan the QR code.'}
+          </span>
+          <span className='ml-5 text-dark/50'>02</span>
+        </div>
+        <div className='flex  justify-between py-5 text-2xl max-md:text-xl'>
+          <span className='text-dark'>Confirm the location.</span>
+          <span className='ml-5 text-dark/50'>03</span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export const HowItWorksFirstSection = () => {
+  const [isOnlyApp, setIsOnlyApp] = useState(true);
+  const [isFirstScreen, setIsFirstScreen] = useState(true);
+
+  const openApp = () => {
+    isOnlyApp && setIsOnlyApp(false);
+  };
+
+  const openQrCode = () => {
+    !isOnlyApp && setIsOnlyApp(true);
+  };
+
   return (
     <Container>
-      <div className='h-full w-full overflow-hidden'>
-        <h1 className='mb-[80px] mt-[170px] p-0 text-8xl text-dark'>
+      <div className='relative mb-10 h-full w-full overflow-hidden'>
+        <h1 className='mb-20 mt-[170px] p-0 text-8xl text-dark max-md:mb-10 max-md:text-4xl'>
           See how <br /> it works. test
         </h1>
-        <div className='my-10 h-[760px]'>
-          <div className='relative h-full overflow-hidden'>
-            <div className='absolute -right-2.5 -top-2.5'>
+        <div className='overflow-hidden'>
+          <div className='relative mt-5 flex h-[760px] rounded-card bg-white max-md:h-[580px] max-md:flex-col'>
+            <div className='absolute -right-2.5 -top-2.5 z-[2] hidden md:block'>
               <CornerToggleContainer>
-                <div className='flex h-[64px] w-[350px] items-center justify-center gap-2 rounded-card bg-white'>
-                  <span>Only App</span>
-                  <span>App & QR code</span>
+                <div className=' flex h-[64px] w-[350px] items-center justify-center gap-2 rounded-card bg-white'>
+                  <div className='w-full px-10'>
+                    <div className='flex w-full items-center justify-between border-b text-[16px]'>
+                      <div
+                        onClick={openQrCode}
+                        className={`-mb-[1px] w-1/2 cursor-pointer border-b-[1px] pb-[7px] text-center ${isOnlyApp ? 'border-dark' : 'border-transparent'} ${isOnlyApp ? 'text-dark' : 'text-dark/50'}`}>
+                        Only App
+                      </div>
+                      <div
+                        onClick={openApp}
+                        className={`-mb-[1px] w-1/2 cursor-pointer border-b-[1px] pb-[7px] text-center ${!isOnlyApp ? 'border-dark' : 'border-transparent'} ${!isOnlyApp ? 'text-dark' : 'text-dark/50'}`}>
+                        App & QR code
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </CornerToggleContainer>
             </div>
-            <div className='h-full overflow-hidden rounded-card bg-white text-center'>
-              CONTENT GOES HERE
+
+            <div className='relative hidden w-full md:flex'>
+              {RenderImageBlock()}
+              {RenderTextBlock(isOnlyApp)}
             </div>
-            <CornerButtonContainer>
-              <RoundButton
-                href='/parking-ticket'
-                theme='light'
-                icon={ArrowRight}
-                animation='group-hover:-rotate-45 group-hover:scale-125'
+
+            <div className='relative h-full w-full max-md:flex md:hidden'>
+              {isFirstScreen ? RenderImageBlock() : RenderTextBlock(isOnlyApp)}
+            </div>
+
+            <div className='hidden md:block'>
+              <ArrowRightShapeButton
+                className={'bg-[white]'}
+                isLightTheme
+                onClick={() => setIsFirstScreen(!isFirstScreen)}
               />
-            </CornerButtonContainer>
+            </div>
+
+            <div className='z-[10] block md:hidden'>
+              {isFirstScreen ? (
+                <CrossShapeButton
+                  className={'bg-[white]'}
+                  isLightTheme
+                  onClick={() => setIsFirstScreen(!isFirstScreen)}
+                />
+              ) : (
+                <ArrowLeftShapeButton
+                  className={'bg-[white]'}
+                  isLightTheme
+                  onClick={() => setIsFirstScreen(!isFirstScreen)}
+                />
+              )}
+            </div>
           </div>
         </div>
 
-        {/*<div>*/}
-        {/*  <div className='relative mb-10 mt-5 flex h-[760px] rounded-card bg-white max-md:flex-col'>*/}
-        {/*    <div className='absolute flex w-full justify-end bg-white'>*/}
-        {/*      <div className='relative flex h-[80px] w-[340px] content-end justify-end rounded-bl-card bg-light'>*/}
-        {/*        <div className='relative h-[70px] w-[330px] rounded-card'>*/}
-        {/*          <ShapeHeaderButtons />*/}
-        {/*        </div>*/}
-        {/*      </div>*/}
-        {/*    </div>*/}
-
-        {/*    <div className='relative h-full w-1/2 max-md:w-full max-md:pl-0'>*/}
-        {/*      <Image*/}
-        {/*        src={MobileParkingCar}*/}
-        {/*        fill*/}
-        {/*        alt='No Parking'*/}
-        {/*        className='ml-[16%] mt-[10%] object-contain max-md:ml-[10%] max-md:mt-[5%]'*/}
-        {/*      />*/}
-        {/*    </div>*/}
-        {/*    <div className='flex h-[760px] w-1/2 items-center justify-center max-md:w-full'>*/}
-        {/*      <div className='max-w-[530px] px-5'>*/}
-        {/*        <div className='flex justify-between py-5 text-2xl'>*/}
-        {/*          <span className='text-dark'>*/}
-        {/*            Take a picture of wrong parker.{' '}*/}
-        {/*          </span>*/}
-        {/*          <span className='ml-5 text-dark/50'>01</span>*/}
-        {/*        </div>*/}
-        {/*        <div className='flex items-center justify-between border-y-[1px] border-dark/10 py-5 text-2xl'>*/}
-        {/*          <span className='text-dark'>*/}
-        {/*            Check that illegal parking situation is well documented.*/}
-        {/*          </span>*/}
-        {/*          <span className='ml-5 text-dark/50'>02</span>*/}
-        {/*        </div>*/}
-        {/*        <div className='flex  justify-between py-5 text-2xl'>*/}
-        {/*          <span className='text-dark'>Confirm the location.</span>*/}
-        {/*          <span className='ml-5 text-dark/50'>03</span>*/}
-        {/*        </div>*/}
-        {/*      </div>*/}
-        {/*    </div>*/}
-        {/*    <ArrowRightShapeButton*/}
-        {/*      className={'bg-[white]'}*/}
-        {/*      isLightTheme*/}
-        {/*      onClick={goToParkingTicket}*/}
-        {/*    />*/}
-        {/*  </div>*/}
-        {/*</div>*/}
+        <div className='mt-2 hidden h-[64px] w-full items-center justify-center gap-2 overflow-hidden rounded-card bg-white max-md:flex'>
+          <div className='w-full px-10'>
+            <div className='flex w-full items-center justify-between border-b text-[16px]'>
+              <div
+                onClick={openQrCode}
+                className={`-mb-[1px] w-1/2 cursor-pointer border-b-[1px] pb-[7px] text-center max-sm:text-xs ${isOnlyApp ? 'border-dark' : 'border-transparent'} ${isOnlyApp ? 'text-dark' : 'text-dark/50'}`}>
+                Only App
+              </div>
+              <div
+                onClick={openApp}
+                className={`-mb-[1px] w-1/2 cursor-pointer border-b-[1px] pb-[7px] text-center max-sm:text-xs ${!isOnlyApp ? 'border-dark' : 'border-transparent'} ${!isOnlyApp ? 'text-dark' : 'text-dark/50'}`}>
+                App & QR code
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Container>
   );
