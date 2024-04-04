@@ -25,7 +25,7 @@ const RootLayout = ({ children, params: { lang } }) => {
       <body className={poppins.className}>
         <Header lang={lang} />
         <main className='mt-[75px]'>{children}</main>
-        <Footer />
+        <Footer lang={lang} />
       </body>
     </html>
   );
