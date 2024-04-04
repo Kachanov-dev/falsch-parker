@@ -26,7 +26,7 @@ const Header = ({ lang }) => {
   return (
     <header>
       <div
-        className={`fixed top-0 z-[1000] flex h-[75px] w-full bg-[#F5F7F9] duration-300  max-lg:backdrop-blur-none lg:bg-[#F5F7F9]/80 lg:backdrop-blur-xl`}>
+        className={`fixed top-0 z-[1000] flex h-[75px] w-full bg-[#F5F7F9] bg-[#F5F7F9]/80 backdrop-blur-xl duration-300 `}>
         <Container>
           <div className='flex justify-between'>
             <div className='flex items-center'>

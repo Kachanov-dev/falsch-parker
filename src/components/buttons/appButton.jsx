@@ -6,8 +6,8 @@ const AppButton = ({ href, icon, children }) => {
   return (
     <Link
       href={href}
-      className='group flex h-[51px] w-[167px] items-center gap-3 rounded-full border border-white bg-dark px-5 transition-colors duration-300 hover:bg-light hover:text-black'>
-      <Icon className='' />
+      className='group flex h-[52px] w-full items-center justify-center gap-3 rounded-full border border-white bg-dark transition-colors duration-300 hover:bg-light hover:text-black'>
+      <Icon />
       <span>{children}</span>
     </Link>
   );
