@@ -30,9 +30,9 @@ const Page = async ({ params: { slug, lang } }) => {
 
   return (
     <Container>
-      <div className='mb-20 mt-4 flex flex-col gap-20'>
+      <div className='mb-20 mt-4 flex flex-col gap-20 max-lg:mb-10 max-lg:gap-10'>
         <Heading post={post} lang={lang} />
-        <div className='px-10'>
+        <div className='lg:px-10'>
           <PortableText
             value={post.content}
             components={portableTextComponents}
@@ -55,7 +55,7 @@ export default Page;
 const portableTextComponents = {
   block: {
     h5: ({ children }) => <h5 className='font-bold'>{children}</h5>,
-    normal: ({ children }) => <p className='mb-4'>{children}</p>,
+    normal: ({ children }) => <p className='mb-4 last:mb-0'>{children}</p>,
   },
   list: {
     bullet: ({ children }) => (
