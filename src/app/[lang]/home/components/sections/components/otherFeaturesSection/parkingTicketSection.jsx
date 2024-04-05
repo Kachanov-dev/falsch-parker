@@ -7,13 +7,14 @@ import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRi
 
 export const ParkingTicketSection = () => {
   return (
-    <div className='flex h-[730px] w-full gap-5'>
-      <div className='relative w-1/2 overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card'>
-        <div className='absolute p-[80px] text-7xl text-dark'>
+    <div className='flex h-full w-full gap-5 max-sm:flex-col'>
+      <div className='relative h-[730px] w-1/2 overflow-hidden rounded-bl-card rounded-tl-card  rounded-tr-card max-lg:h-[440px] max-sm:w-full'>
+        <div className='absolute z-[2] p-[80px] text-7xl text-dark max-lg:p-10 max-lg:text-4xl'>
           <span>White label solution.</span>
         </div>
         <Image
           src={WhiteLabelSolution}
+          fill
           alt='White label solution'
           className='object-cover'
         />
@@ -23,12 +24,13 @@ export const ParkingTicketSection = () => {
           isLightTheme
         />
       </div>
-      <div className='relative w-1/2 overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card'>
-        <div className='absolute p-[80px] text-7xl text-dark'>
+      <div className='relative h-[730px] w-1/2 overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card max-lg:h-[440px] max-sm:w-full'>
+        <div className='absolute z-[2] p-20 text-7xl text-dark max-lg:p-10 max-lg:text-4xl'>
           <span>Parking ticket.</span>
         </div>
         <Image
           src={ParkingTicket}
+          fill
           alt='Parking tocket'
           className='object-cover'
         />
