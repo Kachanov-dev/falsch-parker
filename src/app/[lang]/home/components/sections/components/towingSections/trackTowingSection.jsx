@@ -6,8 +6,8 @@ import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRi
 export const TrackTowingSection = () => {
   return (
     <div className='flex w-full gap-5 max-md:flex-col'>
-      <div className='relative h-[730px] overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card max-md:h-[350px] md:w-1/2'>
-        <div className='absolute top-0 z-[1] flex w-full flex-col p-8 text-center text-dark max-sm:text-5xl md:text-7xl'>
+      <div className='relative h-[730px] overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card max-lg:h-[450px] md:w-1/2'>
+        <div className='absolute top-0 z-[1] flex w-full flex-col p-8 text-center text-dark max-md:text-4xl md:text-5xl lg:text-7xl'>
           <span>
             Track <br /> towing truck.
           </span>
@@ -22,9 +22,9 @@ export const TrackTowingSection = () => {
         <ArrowRightShapeButton className='bg-[#858585]' onClick={() => {}} />
       </div>
 
-      <div className='relative h-[730px]  rounded-bl-card rounded-tl-card rounded-tr-card bg-green max-md:h-[350px] md:w-1/2'>
-        <div className='top-0 z-[1] flex h-full w-full items-center justify-center bg-gradient-to-br from-white to-white/50 bg-clip-text  font-bold text-transparent text-white'>
-          <span className='text-center  max-sm:text-5xl md:text-7xl'>
+      <div className='relative h-[730px] rounded-bl-card rounded-tl-card rounded-tr-card bg-green max-lg:h-[450px] md:w-1/2'>
+        <div className='gradient-text top-0 z-[1] flex h-full w-full items-center justify-center bg-gradient-to-r from-white/90 to-white/60 bg-clip-text text-transparent'>
+          <span className='text-center max-md:text-4xl md:text-5xl lg:text-7xl'>
             Are you a towing company?
           </span>
         </div>

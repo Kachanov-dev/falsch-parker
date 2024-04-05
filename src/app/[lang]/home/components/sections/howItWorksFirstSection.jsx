@@ -8,6 +8,8 @@ import MobileParkingCar from '@/images/home-page/mobil-parking-car.png';
 import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRightShapeButton';
 import { CrossShapeButton } from '@/components/buttons/shapeButtons/crossShapeButton';
 import { ArrowLeftShapeButton } from '@/components/buttons/shapeButtons/arrowLeftShapeButton';
+import { SeeHowItWorks } from '@/components/seeHowItWorks/seeHowItWorks';
+import { Claim } from '@/components/claim/claim';
 
 const RenderImageBlock = () => {
   return (
@@ -62,9 +64,7 @@ export const HowItWorksFirstSection = () => {
   return (
     <Container>
       <div className='relative mb-10 h-full w-full overflow-hidden'>
-        <h1 className='mb-20 mt-[170px] p-0 text-8xl text-dark max-md:mb-10 max-md:text-4xl'>
-          See how <br /> it works. test
-        </h1>
+        <SeeHowItWorks />
         <div className='overflow-hidden'>
           <div className='relative mt-5 flex h-[760px] rounded-card bg-white max-md:h-[580px] max-md:flex-col'>
             <div className='absolute -right-2.5 -top-2.5 z-[2] hidden md:block'>
@@ -128,18 +128,19 @@ export const HowItWorksFirstSection = () => {
             <div className='flex w-full items-center justify-between border-b text-[16px]'>
               <div
                 onClick={openQrCode}
-                className={`-mb-[1px] w-1/2 cursor-pointer border-b-[1px] pb-[7px] text-center max-sm:text-xs ${isOnlyApp ? 'border-dark' : 'border-transparent'} ${isOnlyApp ? 'text-dark' : 'text-dark/50'}`}>
+                className={`-mb-[1px] w-[40%] cursor-pointer border-b-[1px] pb-[7px] text-center max-sm:text-[18px] ${isOnlyApp ? 'border-dark' : 'border-transparent'} ${isOnlyApp ? 'text-dark' : 'text-dark/50'}`}>
                 Only App
               </div>
               <div
                 onClick={openApp}
-                className={`-mb-[1px] w-1/2 cursor-pointer border-b-[1px] pb-[7px] text-center max-sm:text-xs ${!isOnlyApp ? 'border-dark' : 'border-transparent'} ${!isOnlyApp ? 'text-dark' : 'text-dark/50'}`}>
+                className={`-mb-[1px] w-[60%] cursor-pointer border-b-[1px] pb-[7px] text-center max-sm:text-[18px] ${!isOnlyApp ? 'border-dark' : 'border-transparent'} ${!isOnlyApp ? 'text-dark' : 'text-dark/50'}`}>
                 App & QR code
               </div>
             </div>
           </div>
         </div>
       </div>
+      <Claim />
     </Container>
   );
 };

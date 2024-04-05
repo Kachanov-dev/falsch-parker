@@ -6,6 +6,7 @@ import MobileParkingCar from '@/images/home-page/mobil-parking-car.png';
 import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRightShapeButton';
 import { CrossShapeButton } from '@/components/buttons/shapeButtons/crossShapeButton';
 import { ArrowLeftShapeButton } from '@/components/buttons/shapeButtons/arrowLeftShapeButton';
+import { SeeHowItWorks } from '@/components/seeHowItWorks/seeHowItWorks';
 
 const RenderButtons = ({ setScreen, isTwoScreen }) => {
   const goTo = () => {};
@@ -43,9 +44,7 @@ export const HowItWorksSection = () => {
   };
   return (
     <div className='relative overflow-hidden'>
-      <h1 className='mb-[80px] mt-[170px] p-0 text-8xl text-dark max-md:mb-[40px] max-md:text-4xl'>
-        See how <br /> it works.
-      </h1>
+      <SeeHowItWorks />
 
       <div className='relative mb-10 mt-5 hidden h-[760px] rounded-card bg-white max-md:h-[580px] md:flex'>
         <div className='relative h-full w-1/2 max-md:w-full max-md:pl-0'>

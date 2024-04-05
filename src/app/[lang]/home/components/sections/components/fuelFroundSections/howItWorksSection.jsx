@@ -1,14 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import MobileFuelReport from '@/images/home-page/mobile-fuel-report.png';
+import { SeeHowItWorks } from '@/components/seeHowItWorks/seeHowItWorks';
 
 export const HowItWorksSection = () => {
   return (
     <div className='relative '>
-      <h1 className='mb-[80px] mt-[170px] p-0 text-8xl text-dark'>
-        See how <br /> it works.
-      </h1>
-
+      <SeeHowItWorks />
       <div className='flex w-full rounded-card bg-dark max-md:h-[580px] max-md:flex-col md:h-[700px]'>
         <div className='relative h-full max-md:w-full md:w-1/2 '>
           <Image
