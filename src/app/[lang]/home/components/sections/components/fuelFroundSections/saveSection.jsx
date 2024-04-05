@@ -8,7 +8,7 @@ export const SaveSection = () => {
   const goTo = () => {};
 
   return (
-    <div className='my-10 flex gap-5 text-7xl text-dark'>
+    <div className='relative my-10 flex gap-5 text-dark max-md:flex-col lg:text-5xl xl:text-7xl'>
       <div className='relative h-full w-1/2 overflow-hidden rounded-card'>
         <div className='absolute w-full p-[60px] text-center'>
           <span>Save time </span>
