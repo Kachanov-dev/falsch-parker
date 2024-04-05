@@ -1,11 +1,14 @@
 import React from 'react';
-import { HowItWorksFirstSection } from '@/app/[lang]/home/components/sections/howItWorksFirstSection';
+import { HowItWorksSection } from '@/app/[lang]/home/components/sections/components/fuelFroundSections/howItWorksSection';
+import { Container } from '@/components/container/container';
 
 const ContactPage = () => {
   return (
-    <>
-      <HowItWorksFirstSection />
-    </>
+    <Container>
+      <div className='my-20'>
+        <HowItWorksSection />
+      </div>
+    </Container>
   );
 };
 
