@@ -67,7 +67,7 @@ export const WhatClientsSay = ({ usersInfo }) => {
       </div>
 
       <div className='hidden h-full w-full flex-col max-sm:flex'>
-        <span className='mb-9 text-2xl'>
+        <span className='mb-9 text-[32px]'>
           Here's what <br />
           our clients say.
         </span>
