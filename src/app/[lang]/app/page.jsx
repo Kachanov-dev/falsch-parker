@@ -13,11 +13,35 @@ import { WrongParkers } from '@/components/wrongParkers/wrongParkers';
 import { ParkingManagement } from '@/app/[lang]/app/components/parkingManagement';
 import { ParkingCards } from '@/app/[lang]/app/components/parkingCards';
 import { FaqSection } from '@/components/faq/faqSection';
+import { LargeImageWithDesc } from '@/components/largeImageWithDesc/largeImageWithDesc';
+import CancelOrder from '@/images/app-page/cancel-order.png';
 
 const Page = () => {
   return (
     <>
       <Container>
+        <LargeImageWithDesc
+          image={CancelOrder}
+          mobileClassesImg='ml-[15%] mt-[10%] object-contain max-md:ml-[10%] max-md:mt-[5%]'
+          desktopClassesImg='ml-[15%] mt-[10%] object-contain max-md:ml-[18%] max-md:mt-[5%]'
+          descDesktop={
+            <div className='flex flex-col justify-between py-5 text-7xl leading-tight	text-dark'>
+              Easy delete{' '}
+              <span className='text-dark/50'>any parking ticket over app.</span>
+            </div>
+          }
+          descMobile={
+            <div className='flex flex-col justify-between py-5 text-2xl text-dark'>
+              <span className='pb-9 text-7xl max-md:text-4xl'>Tow away.</span>
+              <span className='text-xl'>
+                To ensure legal certainty, take a clear photo of the illegally
+                parked vehicle with its license plate visible. Remember, a court
+                prohibition notice is required for compensation claims.
+              </span>
+            </div>
+          }
+        />
+
         <div className='mt-[80px]'>
           <DivideBanner
             title='Execute parking ticket on your business parkings now.'
