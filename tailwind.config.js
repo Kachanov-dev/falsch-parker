@@ -8,6 +8,9 @@ module.exports = {
         green: '#05D54B',
         dark: '#0D0F11',
       },
+      backgroundImage: {
+        greenGradient: 'linear-gradient(139.89deg, #05D54B 0%, #69AFBA 100%)',
+      },
       maxWidth: {
         container: '1360px',
       },
