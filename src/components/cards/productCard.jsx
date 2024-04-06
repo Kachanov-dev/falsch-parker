@@ -1,18 +1,26 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import FuelFraud from '@/images/home-page/product/fuel-fraud..png';
 import ParkingFines from '@/images/home-page/product/parking-fines.png';
 import RequestTruck from '@/images/home-page/product/request-truck.png';
+import NoParking from '@/images/contact/no-parking.png';
+import Truck from '@/images/contact/truck.png';
+import GasStation from '@/images/contact/gas-station.png';
 import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
 import { RoundButton } from '@/components/buttons/roundButton';
 import { ArrowDown } from '@/components/icons/arrowDown';
 import cl from 'classnames';
 
-export const ProductCard = ({ title, subtitle, type, className }) => {
+export const ProductCard = ({
+  title,
+  subtitle,
+  type,
+  className,
+  icon = ArrowDown,
+}) => {
   let src = null;
   let alt = '';
+  const Icon = icon;
 
   switch (type) {
     case 'fuelFraud':
@@ -27,11 +35,23 @@ export const ProductCard = ({ title, subtitle, type, className }) => {
       src = RequestTruck;
       alt = 'Request Truck';
       break;
+    case 'noParking':
+      src = NoParking;
+      alt = 'No Parking';
+      break;
+    case 'truck':
+      src = Truck;
+      alt = 'Truck';
+      break;
+    case 'gasStation':
+      src = GasStation;
+      alt = 'Gas Station';
+      break;
   }
 
   return (
     <div className='rounded-br-0 h-[680px] w-[440px] cursor-pointer overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card max-md:h-[580px] max-md:w-[328px]'>
-      <div className='group relative h-[680px] w-[440px] transform rounded-card  grayscale transition duration-500 ease-in-out hover:grayscale-0 max-md:h-[580px] max-md:w-[328px]'>
+      <div className='group relative h-[680px] w-[440px] transform rounded-card grayscale transition duration-500 ease-in-out hover:grayscale-0 max-md:h-[580px] max-md:w-[328px]'>
         <div className='absolute z-[2] p-10 text-5xl text-white max-md:text-4xl'>
           {title}
         </div>
@@ -48,7 +68,7 @@ export const ProductCard = ({ title, subtitle, type, className }) => {
         </div>
         <CornerButtonContainer>
           <RoundButton
-            icon={ArrowDown}
+            icon={Icon}
             animation='group-hover:scale-125'
             className={cl(className, 'text-white')}
           />
