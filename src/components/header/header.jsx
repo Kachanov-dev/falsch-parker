@@ -7,7 +7,7 @@ import cl from 'classnames';
 import { usePathname } from 'next/navigation';
 import { useClientTranslation } from '@/app/i18n/client';
 import { headerNavigation } from '@/utils/navigations';
-import logo from '@/images/home-page/logo.png';
+import Logo from '@/images/home-page/logo.svg';
 import { Container } from '@/components/container/container';
 import { PayFineButton } from '@/components/buttons/payFineButton';
 import MobileMenu from '@/components/mobileMenu/mobileMenu';
@@ -28,13 +28,13 @@ const Header = ({ lang }) => {
       <div
         className={`fixed top-0 z-[1000] flex h-[75px] w-full bg-[#F5F7F9] bg-[#F5F7F9]/80 backdrop-blur-xl duration-300 `}>
         <Container>
-          <div className='flex justify-between'>
-            <div className='flex items-center'>
+          <div className='flex items-center justify-between'>
+            <div className='relative h-[40px] w-[100px] shrink-0 max-lg:h-[35px] max-lg:w-[80px]'>
               <Image
-                src={logo}
-                width={100}
-                height={40}
+                src={Logo}
+                fill
                 alt='Falsch-parker logo'
+                className='object-contain'
               />
             </div>
             <div className='flex w-full items-center justify-center max-lg:hidden'>
