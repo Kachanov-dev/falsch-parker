@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import MobileAppMap from '@/images/home-page/mobile-app-map.png';
-import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRightShapeButton';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { ArrowRight } from '@/components/icons/arrowRight';
 
 export const TrackTowingSection = () => {
   return (
@@ -19,7 +21,13 @@ export const TrackTowingSection = () => {
           alt='No Parking'
           className='object-cover'
         />
-        <ArrowRightShapeButton className='bg-[#858585]' onClick={() => {}} />
+        <CornerButtonContainer>
+          <RoundButton
+            icon={ArrowRight}
+            className='bg-[#858585] text-white'
+            animation='group-hover:scale-125 group-hover:-rotate-45'
+          />
+        </CornerButtonContainer>
       </div>
 
       <div className='relative h-[730px] rounded-bl-card rounded-tl-card rounded-tr-card bg-green max-lg:h-[450px] md:w-1/2'>
@@ -32,7 +40,13 @@ export const TrackTowingSection = () => {
         <div className='absolute bottom-[19px] right-[90px] z-[1] text-base text-light'>
           <span>Join now</span>
         </div>
-        <ArrowRightShapeButton className='bg-green' onClick={() => {}} />
+        <CornerButtonContainer>
+          <RoundButton
+            icon={ArrowRight}
+            className='bg-green text-white'
+            animation='group-hover:scale-125 group-hover:-rotate-45'
+          />
+        </CornerButtonContainer>
       </div>
     </div>
   );

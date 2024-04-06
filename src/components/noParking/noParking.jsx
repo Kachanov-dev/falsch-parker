@@ -1,9 +1,13 @@
 'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { OpenAppButton } from '@/components/buttons/openAppButton';
-import { ArrowDownShapeButton } from '@/components/buttons/shapeButtons/arrowDownShapeButton';
 import NoParkingImage from '@/images/global/no-parking.png';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { ArrowDown } from '@/components/icons/arrowDown';
+
 export const NoParking = ({ onClick }) => {
   return (
     <div className='relative h-[700px] w-full overflow-hidden rounded-bl-card rounded-tl-card  rounded-tr-card max-md:h-[580px]'>
@@ -21,7 +25,13 @@ export const NoParking = ({ onClick }) => {
         alt='No Parking'
         className='object-cover object-right max-sm:object-center'
       />
-      <ArrowDownShapeButton className='bg-[#0D0F11]' onClick={onClick} />
+      <CornerButtonContainer>
+        <RoundButton
+          icon={ArrowDown}
+          animation='group-hover:scale-125'
+          className='bg-[#0D0F11] text-white'
+        />
+      </CornerButtonContainer>
     </div>
   );
 };

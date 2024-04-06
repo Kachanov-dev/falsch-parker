@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import MobileLogo from '@/images/home-page/mobile-logo.png';
-import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRightShapeButton';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { ArrowRight } from '@/components/icons/arrowRight';
 
 export const ParkingCardApp = ({ text, onClick }) => {
   return (
@@ -14,7 +16,14 @@ export const ParkingCardApp = ({ text, onClick }) => {
         className='rounded-[18px]'
         alt='Mobile Falsch-parker logo'
       />
-      <ArrowRightShapeButton className={'bg-[#0D0F11]'} onClick={onClick} />
+      <CornerButtonContainer>
+        <RoundButton
+          icon={ArrowRight}
+          onClick={onClick}
+          className='bg-[#0D0F11] text-white'
+          animation='group-hover:scale-125 group-hover:-rotate-45'
+        />
+      </CornerButtonContainer>
     </div>
   );
 };

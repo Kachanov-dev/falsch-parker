@@ -3,9 +3,9 @@ import cl from 'classnames';
 
 export const Cross = ({ className }) => {
   return (
-    <svg width='18' height='18' className={cl('stroke-current', className)}>
+    <svg width='14' height='14' className={cl(className, 'stroke-current')}>
       <path
-        d='M1 9L17 9M9 1L9 17'
+        d='M7 1V13M13 7L1 7'
         strokeWidth='2'
         strokeLinecap='round'
         strokeLinejoin='round'

@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import OurService from '@/images/home-page/ourService.png';
 import CTTVAiImage from '@/images/global/cttv-ai.png';
-import { ArrowLeftShapeButton } from '@/components/buttons/shapeButtons/arrowLeftShapeButton';
-import { CrossShapeButton } from '@/components/buttons/shapeButtons/crossShapeButton';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { ArrowLeft } from '@/components/icons/arrowLeft';
+import { Cross } from '@/components/icons/cross';
 
 export const CCTVAi = () => {
   const [isTwoScreen, setIsTwoScree] = useState(false);
@@ -56,19 +58,14 @@ export const CCTVAi = () => {
         </div>
       )}
 
-      {isTwoScreen ? (
-        <div className='absolute bottom-0 right-0 z-[3]'>
-          <ArrowLeftShapeButton
-            className='bg-dark'
-            onClick={() => setIsTwoScree(!isTwoScreen)}
-          />
-        </div>
-      ) : (
-        <CrossShapeButton
-          className='bg-dark'
-          onClick={() => setIsTwoScree(!isTwoScreen)}
+      <CornerButtonContainer>
+        <RoundButton
+          icon={isTwoScreen ? ArrowLeft : Cross}
+          theme='dark'
+          onClick={() => setIsTwoScree((prev) => !prev)}
+          animation='group-hover:scale-125'
         />
-      )}
+      </CornerButtonContainer>
     </div>
   );
 };

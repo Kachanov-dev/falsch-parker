@@ -10,7 +10,7 @@ export const OurProductsSection = React.forwardRef((props, ref) => {
       <div className='pb-9'>
         <SectionTitle title='Our products' />
       </div>
-      <div className='relative w-full overflow-x-scroll pb-3'>
+      <div className='no-scrollbar relative w-full overflow-x-scroll'>
         <div className='flex w-fit gap-3'>
           <ProductCard
             type='fuelFraud'

@@ -72,7 +72,7 @@ export const WhatClientsSay = ({ usersInfo }) => {
           our clients say.
         </span>
 
-        <div className='flex w-full gap-4 overflow-x-scroll pb-[10px]'>
+        <div className='no-scrollbar flex w-full gap-4 overflow-x-scroll pb-[10px]'>
           {usersInfo.map((item, index) => (
             <MobileCustomerReview
               key={index}

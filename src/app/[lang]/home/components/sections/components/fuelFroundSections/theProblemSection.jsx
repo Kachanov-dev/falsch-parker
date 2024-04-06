@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import RefillImage from '@/images/home-page/refill.png';
-import { CrossShapeButton } from '@/components/buttons/shapeButtons/crossShapeButton';
-import { ArrowLeftShapeButton } from '@/components/buttons/shapeButtons/arrowLeftShapeButton';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { ArrowLeft } from '@/components/icons/arrowLeft';
+import { Cross } from '@/components/icons/cross';
 
 export const TheProblemSection = () => {
   const [isTwoScreen, setIsTwoScree] = useState(false);
@@ -43,19 +45,15 @@ export const TheProblemSection = () => {
         </>
       )}
 
-      {isTwoScreen ? (
-        <div className='absolute bottom-0 right-0 z-[3]'>
-          <ArrowLeftShapeButton
-            className='bg-dark'
-            onClick={() => setIsTwoScree(!isTwoScreen)}
-          />
-        </div>
-      ) : (
-        <CrossShapeButton
-          className='bg-dark'
-          onClick={() => setIsTwoScree(!isTwoScreen)}
+      <CornerButtonContainer>
+        <RoundButton
+          className='relative z-[1]'
+          theme='dark'
+          icon={isTwoScreen ? ArrowLeft : Cross}
+          onClick={() => setIsTwoScree((prev) => !prev)}
+          animation='group-hover:scale-125'
         />
-      )}
+      </CornerButtonContainer>
     </div>
   );
 };

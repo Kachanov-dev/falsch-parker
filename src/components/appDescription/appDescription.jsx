@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { CornerToggleContainer } from '@/components/buttons/cornerToggleContainer';
-import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRightShapeButton';
-import { CrossShapeButton } from '@/components/buttons/shapeButtons/crossShapeButton';
-import { ArrowLeftShapeButton } from '@/components/buttons/shapeButtons/arrowLeftShapeButton';
 import MobileParkingCar from '@/images/home-page/mobil-parking-car.png';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { Cross } from '@/components/icons/cross';
+import { ArrowLeft } from '@/components/icons/arrowLeft';
+import { ArrowRight } from '@/components/icons/arrowRight';
 
 const RenderImageBlock = () => {
   return (
@@ -90,28 +92,24 @@ export const AppDescription = () => {
             {isFirstScreen ? RenderImageBlock() : RenderTextBlock(isOnlyApp)}
           </div>
 
-          <div className='hidden md:block'>
-            <ArrowRightShapeButton
-              className={'bg-[white]'}
-              isLightTheme
-              onClick={() => setIsFirstScreen(!isFirstScreen)}
-            />
+          <div className='md:hidden'>
+            <CornerButtonContainer>
+              <RoundButton
+                theme='light'
+                icon={isFirstScreen ? Cross : ArrowLeft}
+                onClick={() => setIsFirstScreen((prev) => !prev)}
+                animation='group-hover:scale-125'
+              />
+            </CornerButtonContainer>
           </div>
-
-          <div className='z-[10] block md:hidden'>
-            {isFirstScreen ? (
-              <CrossShapeButton
-                className={'bg-[white]'}
-                isLightTheme
-                onClick={() => setIsFirstScreen(!isFirstScreen)}
+          <div className='max-md:hidden'>
+            <CornerButtonContainer>
+              <RoundButton
+                theme='light'
+                icon={ArrowRight}
+                animation='group-hover:scale-125 group-hover:translate-x-1'
               />
-            ) : (
-              <ArrowLeftShapeButton
-                className={'bg-[white]'}
-                isLightTheme
-                onClick={() => setIsFirstScreen(!isFirstScreen)}
-              />
-            )}
+            </CornerButtonContainer>
           </div>
         </div>
       </div>

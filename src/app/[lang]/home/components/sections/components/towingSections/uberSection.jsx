@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import UberTowing1 from '@/images/home-page/uber-towing-1.png';
 import UberTowing2 from '@/images/home-page/uber-towing-2.png';
-import { CrossShapeButton } from '@/components/buttons/shapeButtons/crossShapeButton';
-import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRightShapeButton';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { Cross } from '@/components/icons/cross';
+import { ArrowLeft } from '@/components/icons/arrowLeft';
 
 export const UberSection = () => {
   const [isFirstScreen, setIsFirstScreen] = useState(true);
@@ -55,20 +57,15 @@ export const UberSection = () => {
             </div>
           </div>
         )}
-
-        {isFirstScreen ? (
-          <CrossShapeButton
-            className='bg-dark'
-            onClick={() => setIsFirstScreen(false)}
+        <CornerButtonContainer>
+          <RoundButton
+            icon={isFirstScreen ? Cross : ArrowLeft}
+            onClick={() => setIsFirstScreen((prev) => !prev)}
+            theme='dark'
+            className='relative z-[1]'
+            animation='group-hover:scale-125'
           />
-        ) : (
-          <div className='relative z-[1]'>
-            <ArrowRightShapeButton
-              className='bg-dark'
-              onClick={() => setIsFirstScreen(true)}
-            />
-          </div>
-        )}
+        </CornerButtonContainer>
       </div>
     </>
   );

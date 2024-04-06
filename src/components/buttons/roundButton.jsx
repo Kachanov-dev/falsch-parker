@@ -2,7 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import cl from 'classnames';
 
-const RoundButton = ({ icon, href, animation, onClick, theme = 'dark' }) => {
+const RoundButton = ({
+  icon,
+  href,
+  animation,
+  onClick,
+  theme = '',
+  className = '',
+}) => {
   const Icon = icon;
   const Container = href ? Link : 'button';
 
@@ -17,7 +24,8 @@ const RoundButton = ({ icon, href, animation, onClick, theme = 'dark' }) => {
       href={href}
       className={cl(
         'group flex h-12 w-12 items-center justify-center rounded-full outline-none',
-        colors[theme]
+        theme ? colors[theme] : '',
+        className
       )}>
       <Icon className={cl('transition-transform duration-300', animation)} />
     </Container>

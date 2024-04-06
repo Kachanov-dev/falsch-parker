@@ -35,8 +35,7 @@ export const FaqSection = () => {
     <Container>
       <div className='h-full'>
         <div className='mb-9 flex justify-between'>
-          <SectionTitle title='Testimonials' />
-          {/*<ContactUs />*/}
+          <SectionTitle title='FAQ' />
         </div>
 
         <h5 className='mb-20 max-md:text-3xl md:text-8xl lg:text-9xl'>

@@ -3,38 +3,36 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import MobileParkingCar from '@/images/home-page/mobil-parking-car.png';
-import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRightShapeButton';
-import { CrossShapeButton } from '@/components/buttons/shapeButtons/crossShapeButton';
-import { ArrowLeftShapeButton } from '@/components/buttons/shapeButtons/arrowLeftShapeButton';
 import { SeeHowItWorks } from '@/components/seeHowItWorks/seeHowItWorks';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { ArrowRight } from '@/components/icons/arrowRight';
+import { Cross } from '@/components/icons/cross';
+import { ArrowLeft } from '@/components/icons/arrowLeft';
 
 const RenderButtons = ({ setScreen, isTwoScreen }) => {
-  const goTo = () => {};
   return (
-    <div className='relative'>
-      <div className='block max-md:hidden'>
-        <ArrowRightShapeButton
-          className={'bg-[white]'}
-          isLightTheme
-          onClick={goTo()}
-        />
-      </div>
-      <div className='hidden max-md:block'>
-        {isTwoScreen ? (
-          <ArrowLeftShapeButton
-            className={'bg-[white]'}
-            isLightTheme
-            onClick={() => setScreen(false)}
+    <>
+      <div className='max-md:hidden'>
+        <CornerButtonContainer>
+          <RoundButton
+            theme='light'
+            icon={ArrowRight}
+            animation='group-hover:scale-125 group-hover:-rotate-45'
           />
-        ) : (
-          <CrossShapeButton
-            className={'bg-[white]'}
-            isLightTheme
-            onClick={() => setScreen(true)}
-          />
-        )}
+        </CornerButtonContainer>
       </div>
-    </div>
+      <div className='md:hidden'>
+        <CornerButtonContainer>
+          <RoundButton
+            theme='light'
+            icon={!isTwoScreen ? Cross : ArrowLeft}
+            onClick={() => setScreen((prev) => !prev)}
+            animation='group-hover:scale-125'
+          />
+        </CornerButtonContainer>
+      </div>
+    </>
   );
 };
 export const HowItWorksSection = () => {

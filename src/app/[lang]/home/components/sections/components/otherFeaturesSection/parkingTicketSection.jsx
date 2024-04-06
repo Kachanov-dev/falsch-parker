@@ -2,8 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import ParkingTicket from '@/images/home-page/parkingTicket.png';
 import WhiteLabelSolution from '@/images/home-page/white-label-solution.png';
-import { CrossShapeButton } from '@/components/buttons/shapeButtons/crossShapeButton';
-import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRightShapeButton';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { Cross } from '@/components/icons/cross';
+import { ArrowRight } from '@/components/icons/arrowRight';
 
 export const ParkingTicketSection = () => {
   return (
@@ -18,11 +20,13 @@ export const ParkingTicketSection = () => {
           alt='White label solution'
           className='object-cover'
         />
-        <CrossShapeButton
-          className='bg-white'
-          onClick={() => {}}
-          isLightTheme
-        />
+        <CornerButtonContainer>
+          <RoundButton
+            icon={Cross}
+            theme='light'
+            animation='group-hover:scale-125 group-hover:-rotate-90'
+          />
+        </CornerButtonContainer>
       </div>
       <div className='relative h-[730px] w-1/2 overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card max-lg:h-[440px] max-sm:w-full'>
         <div className='absolute z-[2] p-20 text-7xl text-dark max-lg:p-10 max-lg:text-4xl'>
@@ -34,11 +38,13 @@ export const ParkingTicketSection = () => {
           alt='Parking tocket'
           className='object-cover'
         />
-        <ArrowRightShapeButton
-          className='bg-white'
-          onClick={() => {}}
-          isLightTheme
-        />
+        <CornerButtonContainer>
+          <RoundButton
+            icon={ArrowRight}
+            theme='light'
+            animation='group-hover:scale-125 group-hover:-rotate-45'
+          />
+        </CornerButtonContainer>
       </div>
     </div>
   );

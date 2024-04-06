@@ -5,7 +5,10 @@ import Image from 'next/image';
 import FuelFraud from '@/images/home-page/product/fuel-fraud..png';
 import ParkingFines from '@/images/home-page/product/parking-fines.png';
 import RequestTruck from '@/images/home-page/product/request-truck.png';
-import { ArrowDownGroupShapeButton } from '@/components/buttons/shapeButtons/arrowDownGroupShapeButton';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { ArrowDown } from '@/components/icons/arrowDown';
+import cl from 'classnames';
 
 export const ProductCard = ({ title, subtitle, type, className }) => {
   let src = null;
@@ -43,8 +46,13 @@ export const ProductCard = ({ title, subtitle, type, className }) => {
         <div className='absolute bottom-0 z-[2] p-10 pr-14 text-lg text-white/50 transition duration-500 ease-in-out group-hover:text-white max-md:text-base'>
           {subtitle}
         </div>
-
-        <ArrowDownGroupShapeButton className={className} />
+        <CornerButtonContainer>
+          <RoundButton
+            icon={ArrowDown}
+            animation='group-hover:scale-125'
+            className={cl(className, 'text-white')}
+          />
+        </CornerButtonContainer>
       </div>
     </div>
   );

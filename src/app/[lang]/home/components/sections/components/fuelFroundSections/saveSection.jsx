@@ -3,12 +3,12 @@ import Image from 'next/image';
 import LineSaveMoney from '@/images/home-page/lineSaveMoney.png';
 import LineSaveTime from '@/images/home-page/lineSaveTime.png';
 import MobLineSaveTime from '@/images/home-page/mobileLineSaveTime.png';
-import { ArrowRightShapeButton } from '@/components/buttons/shapeButtons/arrowRightShapeButton';
 import MobLineSaveMoney from '@/images/home-page/mobileLineSaveMoney.png';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { ArrowRight } from '@/components/icons/arrowRight';
 
 export const SaveSection = () => {
-  const goTo = () => {};
-
   return (
     <div className='relative my-10 flex gap-5 text-dark max-lg:text-[34px] max-md:text-[24px] max-sm:flex-col max-sm:items-center lg:text-[53px] xl:text-[64px]'>
       <div className='relative h-full w-1/2 overflow-hidden rounded-card max-sm:h-[343px] max-sm:w-[343px]'>
@@ -47,11 +47,13 @@ export const SaveSection = () => {
           alt='Save time'
           className='hidden object-cover max-sm:block'
         />
-        <ArrowRightShapeButton
-          className={'bg-[#fffff]'}
-          onClick={goTo}
-          isLightTheme
-        />
+        <CornerButtonContainer>
+          <RoundButton
+            icon={ArrowRight}
+            theme='light'
+            animation='group-hover:scale-125 group-hover:-rotate-45'
+          />
+        </CornerButtonContainer>
       </div>
     </div>
   );

@@ -4,8 +4,10 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import MobileFuelReport from '@/images/home-page/mobile-fuel-report.png';
 import { SeeHowItWorks } from '@/components/seeHowItWorks/seeHowItWorks';
-import { CrossShapeButton } from '@/components/buttons/shapeButtons/crossShapeButton';
-import { ArrowLeftShapeButton } from '@/components/buttons/shapeButtons/arrowLeftShapeButton';
+import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
+import { RoundButton } from '@/components/buttons/roundButton';
+import { Cross } from '@/components/icons/cross';
+import { ArrowLeft } from '@/components/icons/arrowLeft';
 
 export const HowItWorksSection = () => {
   const [isFirstScreen, setIsFirstScreen] = useState(true);
@@ -63,18 +65,15 @@ export const HowItWorksSection = () => {
           )}
         </div>
 
-        <div className='hidden max-md:flex'>
-          {isFirstScreen ? (
-            <CrossShapeButton
-              className='bg-dark'
-              onClick={() => setIsFirstScreen(false)}
+        <div className='md:hidden'>
+          <CornerButtonContainer>
+            <RoundButton
+              theme='dark'
+              icon={isFirstScreen ? Cross : ArrowLeft}
+              onClick={() => setIsFirstScreen((prev) => !prev)}
+              animation='group-hover:scale-125'
             />
-          ) : (
-            <ArrowLeftShapeButton
-              className='bg-dark'
-              onClick={() => setIsFirstScreen(true)}
-            />
-          )}
+          </CornerButtonContainer>
         </div>
       </div>
     </div>
