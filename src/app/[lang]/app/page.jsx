@@ -7,7 +7,10 @@ import PortfolioIcon from '@/images/app-page/icons/portfolio.svg';
 import { NoParking } from '@/components/noParking/noParking';
 import { Claim } from '@/components/claim/claim';
 import { CCTVAi } from '@/components/cctv/cctvAi';
-import { HowItWorksSection } from '@/app/[lang]/home/components/sections/components/towingSections/howItWorksSection';
+import { AppDescription } from '@/components/appDescription/appDescription';
+import { SeeHowItWorks } from '@/components/seeHowItWorks/seeHowItWorks';
+import { WrongParkers } from '@/components/wrongParkers/wrongParkers';
+import { ParkingManagement } from '@/app/[lang]/app/components/parkingManagement';
 
 const Page = () => {
   return (
@@ -20,11 +23,23 @@ const Page = () => {
             images={[BlankIcon, PortfolioIcon]}
           />
         </div>
-        <div className='my-[172px] max-md:my-[100px]'>
+
+        <div className='mt-[172px] max-md:mt-[100px]'>
           <NoParking onClick={() => {}} />
         </div>
+
+        <section>
+          <SeeHowItWorks />
+          <AppDescription />
+          <WrongParkers />
+        </section>
+
         <div className='mb-[172px] mt-[20px]'>
           <Claim />
+        </div>
+
+        <div>
+          <ParkingManagement />
         </div>
 
         <div className='my-[50px]'>
