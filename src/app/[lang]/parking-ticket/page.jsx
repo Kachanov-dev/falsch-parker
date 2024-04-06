@@ -1,7 +1,13 @@
 import React from 'react';
+import { Container } from '@/components/container/container';
+import { FaqSection } from '@/components/faq/faqSection';
 
 const ParkingTicketPage = () => {
-  return <div>Parking Ticket - Page</div>;
+  return (
+    <Container>
+      <FaqSection />
+    </Container>
+  );
 };
 
 export default ParkingTicketPage;

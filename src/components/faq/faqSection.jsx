@@ -1,8 +1,10 @@
 'use client';
 
+import React from 'react';
 import { SectionTitle } from '@/components/sectionTitle/sectionTitle';
 import { Container } from '@/components/container/container';
-import { Faq } from '@/components/faq/faq';
+import { ArrowDotButton } from '@/components/buttons/arrowDotButton';
+import { FaqList } from './faqList';
 
 const faqList = [
   {
@@ -33,9 +35,14 @@ const faqList = [
 export const FaqSection = () => {
   return (
     <Container>
-      <div className='h-full'>
-        <div className='mb-9 flex justify-between'>
-          <SectionTitle title='FAQ' />
+      <div className='my-[172px] h-full max-md:my-[100px]'>
+        <div className='mb-9 flex items-center justify-between'>
+          <div>
+            <SectionTitle title='FAQ' />
+          </div>
+          <div className='flex w-full justify-end max-sm:hidden'>
+            <ArrowDotButton theme='dark'>Ask your question</ArrowDotButton>
+          </div>
         </div>
 
         <h5 className='mb-20 max-md:text-3xl md:text-8xl lg:text-9xl'>
@@ -44,7 +51,11 @@ export const FaqSection = () => {
         </h5>
 
         <div className='w-full'>
-          <Faq faqList={faqList} />
+          <FaqList faqList={faqList} />
+        </div>
+
+        <div className='mt-10 hidden w-full justify-center max-sm:flex'>
+          <ArrowDotButton theme='dark'>Ask your question</ArrowDotButton>
         </div>
       </div>
     </Container>

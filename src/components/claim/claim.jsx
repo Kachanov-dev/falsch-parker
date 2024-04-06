@@ -6,7 +6,7 @@ import ClaimImage from '@/images/global/claim.png';
 export const Claim = () => {
   return (
     <div className='relative h-[700px] w-full overflow-hidden rounded-card max-md:h-[580px]'>
-      <div className='absolute left-0 z-[1] h-full p-16'>
+      <div className='absolute left-0 z-[1] h-full p-16 max-sm:p-8'>
         <div className='flex h-full w-full items-center'>
           <div className='flex h-full max-h-[355px] w-full max-w-[500px] flex-col justify-between text-white '>
             <h4 className='text-7xl max-md:text-6xl'>Claim.</h4>

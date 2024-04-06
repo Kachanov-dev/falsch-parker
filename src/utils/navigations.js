@@ -3,6 +3,7 @@ export const headerNavigation = [
   { name: 'app', href: '/app' },
   { name: 'parkingTicket', href: '/parking-ticket' },
   { name: 'towing', href: '/towing' },
+  { name: 'fuelFraud', href: '/fuel-fraud' },
   { name: 'blog', href: '/blog' },
   { name: 'contact', href: '/contact' },
 ];

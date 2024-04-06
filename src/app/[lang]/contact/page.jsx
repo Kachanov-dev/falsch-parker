@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from '@/components/container/container';
 import { ProductCard } from '@/components/cards/productCard';
 import { ArrowRight } from '@/components/icons/arrowRight';
+import { FaqSection } from '@/components/faq/faqSection';
 
 const data = [
   {
@@ -41,6 +42,8 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+
+      <FaqSection />
     </Container>
   );
 };

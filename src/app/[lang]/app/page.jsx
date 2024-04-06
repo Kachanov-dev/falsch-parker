@@ -11,6 +11,8 @@ import { AppDescription } from '@/components/appDescription/appDescription';
 import { SeeHowItWorks } from '@/components/seeHowItWorks/seeHowItWorks';
 import { WrongParkers } from '@/components/wrongParkers/wrongParkers';
 import { ParkingManagement } from '@/app/[lang]/app/components/parkingManagement';
+import { ParkingCards } from '@/app/[lang]/app/components/parkingCards';
+import { FaqSection } from '@/components/faq/faqSection';
 
 const Page = () => {
   return (
@@ -34,17 +36,19 @@ const Page = () => {
           <WrongParkers />
         </section>
 
-        <div className='mb-[172px] mt-[20px]'>
+        <div className='mt-[20px] max-md:mb-[100px] md:mb-[172px]'>
           <Claim />
         </div>
 
-        <div>
-          <ParkingManagement />
+        <ParkingManagement />
+
+        <div className='my-5 md:my-[150px]'>
+          <ParkingCards />
         </div>
 
-        <div className='my-[50px]'>
-          <CCTVAi />
-        </div>
+        <CCTVAi />
+
+        <FaqSection />
       </Container>
     </>
   );
