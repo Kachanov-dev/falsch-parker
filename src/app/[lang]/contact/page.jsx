@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container } from '@/components/container/container';
-import { FaqSection } from '@/app/[lang]/home/components/sections/faqSection';
+import { SaveSection } from '@/app/[lang]/home/components/sections/components/fuelFroundSections/saveSection';
 
 const ContactPage = () => {
   return (
     <Container>
       <div className='my-20'>
-        <FaqSection />
+        <SaveSection />
       </div>
     </Container>
   );
