@@ -26,6 +26,7 @@ const PostCover = ({ imageUrl, tag, time, title, synopsis, href, scroll }) => {
       </div>
       <CornerButtonContainer>
         <RoundButton
+          theme='dark'
           href={href}
           icon={scroll ? ArrowDown : ArrowRight}
           animation={
