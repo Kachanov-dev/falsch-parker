@@ -31,7 +31,7 @@ export const footerLinks = [
   {
     title: 'Locations',
     links: [
-      { title: 'Towing service Zurich', href: '/' },
+      { title: 'Towing service Zurich', href: '/location/zurich' },
       { title: 'Towing service Bern', href: '/' },
       { title: 'Towing service Geneva', href: '/' },
       { title: 'Towing service Basel', href: '/' },
