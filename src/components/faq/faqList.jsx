@@ -1,8 +1,9 @@
+'use client';
 import React, { useState } from 'react';
 import { Dash } from '@/components/icons/dash';
 import { Cross } from '@/components/icons/cross';
 
-const ListItem = ({ item, isActive, onSetActive }) => {
+const Item = ({ item, isActive, onSetActive }) => {
   return (
     <div
       className={`cursor-pointer border-b border-dark/20 duration-500 ${isActive ? 'rounded-card bg-white' : 'bg-transparent'} pt-6`}
@@ -40,7 +41,7 @@ const ListItem = ({ item, isActive, onSetActive }) => {
   );
 };
 
-const FaqList = ({ items }) => {
+const ListItems = ({ items }) => {
   const [activeIndexes, setActiveIndexes] = useState([]);
 
   const handleSetActive = (index) => {
@@ -56,7 +57,7 @@ const FaqList = ({ items }) => {
   return (
     <div className='flex flex-col gap-[68px]'>
       {items.map((item, index) => (
-        <ListItem
+        <Item
           key={index}
           item={item}
           isActive={activeIndexes.includes(index)}
@@ -67,10 +68,10 @@ const FaqList = ({ items }) => {
   );
 };
 
-export const Faq = ({ faqList }) => {
+export const FaqList = ({ faqList }) => {
   return (
     <div className='w-full'>
-      <FaqList items={faqList} />
+      <ListItems items={faqList} />
     </div>
   );
 };

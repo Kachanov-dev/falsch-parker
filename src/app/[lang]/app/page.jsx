@@ -11,8 +11,8 @@ import { AppDescription } from '@/components/appDescription/appDescription';
 import { SeeHowItWorks } from '@/components/seeHowItWorks/seeHowItWorks';
 import { WrongParkers } from '@/components/wrongParkers/wrongParkers';
 import { ParkingManagement } from '@/app/[lang]/app/components/parkingManagement';
-import { FaqSection } from './components/faqSection';
 import { ParkingCards } from '@/app/[lang]/app/components/parkingCards';
+import { FaqSection } from '@/components/faq/faqSection';
 
 const Page = () => {
   return (
@@ -48,9 +48,7 @@ const Page = () => {
 
         <CCTVAi />
 
-        {/*<div>*/}
-        {/*  <FaqSection />*/}
-        {/*</div>*/}
+        <FaqSection />
       </Container>
     </>
   );
