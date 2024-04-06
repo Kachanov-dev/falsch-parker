@@ -2,8 +2,15 @@ import React from 'react';
 import Image from 'next/image';
 import { v4 as uuidv4 } from 'uuid';
 import { SectionTitle } from '@/components/sectionTitle/sectionTitle';
+import cl from 'classnames';
 
-export const DivideBanner = ({ sectionTitles, title, subtitle, images }) => {
+export const DivideBanner = ({
+  sectionTitles,
+  title,
+  subtitle,
+  images,
+  subtitleClassName = '',
+}) => {
   return (
     <>
       {sectionTitles?.length && (
@@ -13,11 +20,11 @@ export const DivideBanner = ({ sectionTitles, title, subtitle, images }) => {
           ))}
         </div>
       )}
-      <div className='border-b border-black pb-14 text-8xl max-md:text-[32px]'>
+      <div className='border-b border-black pb-14 text-8xl max-md:pb-8 max-md:text-[32px]'>
         {title}
       </div>
-      <div className='flex pt-[60px]'>
-        <div className='flex-s flex w-1/2 items-start'>
+      <div className='flex pt-14 max-md:pt-8'>
+        <div className='flex w-1/2 items-start'>
           {images?.length &&
             images.map((src, index) => {
               if (index === 0) {
@@ -43,7 +50,11 @@ export const DivideBanner = ({ sectionTitles, title, subtitle, images }) => {
             })}
         </div>
         <div className='flex w-1/2 justify-end'>
-          <span className='text-3xl text-[#0D0F11] max-md:text-sm'>
+          <span
+            className={cl(
+              'text-3xl text-[#0D0F11] max-md:text-sm',
+              subtitleClassName
+            )}>
             {subtitle}
           </span>
         </div>

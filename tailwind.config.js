@@ -11,6 +11,10 @@ module.exports = {
       maxWidth: {
         container: '1360px',
       },
+      height: {
+        card: '700px',
+        cardMobile: '600px',
+      },
       borderRadius: {
         card: '32px',
       },

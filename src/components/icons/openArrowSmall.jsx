@@ -1,16 +1,16 @@
 import React from 'react';
 import cl from 'classnames';
 
-const OpenArrow = ({ className }) => {
+const OpenArrowSmall = ({ className }) => {
   return (
     <svg
-      width='17'
-      height='9'
+      width='12'
+      height='6'
       fill='none'
       className={cl('stroke-current', className)}>
       <path
-        d='M1.2085 1.5835L8.50016 7.41683L15.7918 1.5835'
-        strokeWidth='2'
+        d='m1 1 5 4 5-4'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
       />
@@ -18,4 +18,4 @@ const OpenArrow = ({ className }) => {
   );
 };
 
-export { OpenArrow };
+export { OpenArrowSmall };
