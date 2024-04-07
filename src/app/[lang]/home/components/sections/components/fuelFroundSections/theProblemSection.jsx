@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import RefillImage from '@/images/home-page/refill.png';
+import RefillImage from '../../../../../../../../public/images/global/refill.png';
 import { CornerButtonContainer } from '@/components/buttons/cornerButtonContainer';
 import { RoundButton } from '@/components/buttons/roundButton';
 import { ArrowLeft } from '@/components/icons/arrowLeft';

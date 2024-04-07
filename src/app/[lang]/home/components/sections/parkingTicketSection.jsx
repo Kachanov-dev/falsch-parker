@@ -18,7 +18,7 @@ export const ParkingTicketSection = () => {
           images={[EyeIcon, FormIcon, MarkIcon, PhotoIcon]}
         />
       </div>
-      <NoParking onClick={() => {}} />
+      <NoParking />
     </Container>
   );
 };

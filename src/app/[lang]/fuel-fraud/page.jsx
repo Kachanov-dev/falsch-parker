@@ -7,24 +7,34 @@ import { DivideBanner } from '@/components/divideBanner/divideBanner';
 import RefillIcon from '@/images/global/icons/divideIcons/refill.svg';
 import BlankIcon from '@/images/global/icons/divideIcons/blank.svg';
 import CoinIcon from '@/images/global/icons/divideIcons/coin.svg';
+import { FullControl } from '@/components/fullControl/fullControl';
+import FullControlFraudMobile from '@/images/full-control/fuel-fraud-mobile.png';
+import FullControlFraud from '@/images/full-control/fuel-fraud.png';
+import { SaveTimeAndMoney } from '@/components/saveTimeAndMoney/saveTimeAndMoney';
+import { HaveReport } from '@/app/[lang]/fuel-fraud/components/haveReport';
 
 const FuelFraudPage = () => {
   return (
     <Container>
-      <div className='my-[170px]'>
+      <div className='mb-[170px] mt-[100px] max-md:mb-[100px]'>
         <DivideBanner
           title='Report fuel fraud on your gas station.'
           subtitle='Submit fuel fraud reports for your gas station and secure refunds effortlessly with our automated processing system.'
           images={[RefillIcon, BlankIcon, CoinIcon]}
         />
       </div>
+
+      <HaveReport />
+
       <LargeImageWithDesc
         image={MobileParkingCar}
         mobileClassesImg='ml-[16%] mt-[10%] object-contain max-md:ml-[16%] max-md:mt-[5%]'
         desktopClassesImg='ml-[16%] mt-[10%] object-contain max-md:ml-[18%] max-md:mt-[5%]'
         descDesktop={
           <div className='flex flex-col justify-between py-5 text-2xl text-dark'>
-            <span className='pb-9 text-7xl'>Tow away.</span>
+            <span className='pb-9 text-7xl'>
+              Reduce <br /> fuel theft.
+            </span>
             <span className='text-xl'>
               To ensure legal certainty, take a clear photo of the illegally
               parked vehicle with its license plate visible. Remember, a court
@@ -34,7 +44,9 @@ const FuelFraudPage = () => {
         }
         descMobile={
           <div className='flex flex-col justify-between py-5 text-2xl text-dark'>
-            <span className='pb-9 text-7xl max-md:text-4xl'>Tow away.</span>
+            <span className='pb-9 text-7xl max-md:text-4xl'>
+              Reduce fuel theft.
+            </span>
             <span className='text-xl'>
               To ensure legal certainty, take a clear photo of the illegally
               parked vehicle with its license plate visible. Remember, a court
@@ -43,6 +55,17 @@ const FuelFraudPage = () => {
           </div>
         }
       />
+
+      <FullControl
+        smallCover={FullControlFraudMobile}
+        cover={FullControlFraud}
+        subtitle='In the dashboard, you can view payment
+        statuses and have the option to delete any report
+        if a previously unpaid customer returns and pays on the spot.
+        Additionally, you can print out any report as needed.'
+      />
+
+      <SaveTimeAndMoney />
       <FaqSection />
     </Container>
   );
