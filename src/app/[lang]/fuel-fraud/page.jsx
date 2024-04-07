@@ -12,6 +12,7 @@ import FullControlFraudMobile from '@/images/full-control/fuel-fraud-mobile.png'
 import FullControlFraud from '@/images/full-control/fuel-fraud.png';
 import { SaveTimeAndMoney } from '@/components/saveTimeAndMoney/saveTimeAndMoney';
 import { HaveReport } from '@/app/[lang]/fuel-fraud/components/haveReport';
+import { SeeHowItWorks } from '@/components/seeHowItWorks/seeHowItWorks';
 
 const FuelFraudPage = () => {
   return (
@@ -25,6 +26,8 @@ const FuelFraudPage = () => {
       </div>
 
       <HaveReport />
+
+      <SeeHowItWorks />
 
       <LargeImageWithDesc
         image={MobileParkingCar}
@@ -56,14 +59,16 @@ const FuelFraudPage = () => {
         }
       />
 
-      <FullControl
-        smallCover={FullControlFraudMobile}
-        cover={FullControlFraud}
-        subtitle='In the dashboard, you can view payment
+      <div className='mt-5'>
+        <FullControl
+          smallCover={FullControlFraudMobile}
+          cover={FullControlFraud}
+          subtitle='In the dashboard, you can view payment
         statuses and have the option to delete any report
         if a previously unpaid customer returns and pays on the spot.
         Additionally, you can print out any report as needed.'
-      />
+        />
+      </div>
 
       <SaveTimeAndMoney />
       <FaqSection />

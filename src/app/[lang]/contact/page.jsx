@@ -26,7 +26,7 @@ const data = [
 const ContactPage = () => {
   return (
     <Container>
-      <div className='my-16 max-md:my-10'>
+      <div className='mt-16 max-md:mt-10'>
         <div className='no-scrollbar overflow-x-auto'>
           <div className='flex w-fit gap-5'>
             {data.map((item, index) => (

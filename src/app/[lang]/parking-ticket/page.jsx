@@ -18,7 +18,7 @@ import { CancelOrder } from '@/app/[lang]/parking-ticket/components/cancelOrder'
 const ParkingTicketPage = () => {
   return (
     <Container>
-      <div className='mt-[80px]'>
+      <div className='mb-[172px] mt-[80px] max-md:mb-[100px]'>
         <DivideBanner
           title='Execute parking ticket on your business parkings now.'
           subtitle='On your business and private parkings you’re allowed to fine wrong parkers. Our app provides you with the infrastructure to execute parking fines with few clicks. Our app is fully automized and we take care of everything what happens after you create the fine'
@@ -26,9 +26,7 @@ const ParkingTicketPage = () => {
         />
       </div>
 
-      <div className='mt-[172px] max-md:mt-[100px]'>
-        <NoParking />
-      </div>
+      <NoParking />
 
       <section>
         <SeeHowItWorks />

@@ -58,7 +58,10 @@ const TowingPage = () => {
             </div>
           }
         />
-        <WrongParkers />
+
+        <div className='mt-5'>
+          <WrongParkers />
+        </div>
 
         <div className='mt-5'>
           <FullControl
