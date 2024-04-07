@@ -13,7 +13,7 @@ import { LargeImageWithDesc } from '@/components/largeImageWithDesc/largeImageWi
 export const TowingSection = () => {
   return (
     <Container>
-      <div className='my-[170px]'>
+      <div className='my-[170px] max-md:my-[100px]'>
         <DivideBanner
           sectionTitles={['Towing']}
           title='Tow from business and private parkings now.'
@@ -21,7 +21,9 @@ export const TowingSection = () => {
           images={[EyeIcon, PhotoIcon, Towing]}
         />
       </div>
-
+      <div>
+        <Uber />
+      </div>
       <SeeHowItWorks />
       <LargeImageWithDesc
         image={MobileParkingCar}
@@ -49,8 +51,9 @@ export const TowingSection = () => {
         }
       />
 
-      <Uber />
-      <TrackTowingSection />
+      <div className='mt-5'>
+        <TrackTowingSection />
+      </div>
     </Container>
   );
 };

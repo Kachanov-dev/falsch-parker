@@ -10,7 +10,7 @@ import { ArrowRight } from '@/components/icons/arrowRight';
 
 export const SaveTimeAndMoney = () => {
   return (
-    <div className='relative my-10 flex gap-5 text-dark max-lg:text-[34px] max-md:text-[24px] max-sm:flex-col max-sm:items-center lg:text-[53px] xl:text-[64px]'>
+    <div className='relative mt-5 flex gap-5 text-dark max-lg:text-[34px] max-md:text-[24px] max-sm:flex-col max-sm:items-center lg:text-[53px] xl:text-[64px]'>
       <div className='relative h-full w-1/2 overflow-hidden rounded-card max-sm:h-[343px] max-sm:w-[343px]'>
         <div className='absolute w-full p-[20px] text-center  max-sm:p-[20px] xl:p-[60px]'>
           <span>Save time </span>

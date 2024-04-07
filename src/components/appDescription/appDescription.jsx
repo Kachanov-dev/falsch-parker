@@ -61,7 +61,7 @@ export const AppDescription = () => {
   };
 
   return (
-    <div className='relative mb-10 h-full w-full overflow-hidden'>
+    <div className='relative mb-10 h-full w-full overflow-hidden max-md:mb-5'>
       <div className='overflow-hidden'>
         <div className='relative mt-5 flex h-[760px] rounded-card bg-white max-md:h-[580px] max-md:flex-col'>
           <div className='absolute -right-2.5 -top-2.5 z-[2] hidden md:block'>

@@ -10,7 +10,7 @@ import { NoParking } from '@/components/noParking/noParking';
 export const ParkingTicketSection = () => {
   return (
     <Container>
-      <div className='my-[170px]'>
+      <div className='my-[170px] max-md:my-[100px]'>
         <DivideBanner
           sectionTitles={['Parking ticket']}
           title='Execute parking ticket on your business parkings now.'

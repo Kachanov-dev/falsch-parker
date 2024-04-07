@@ -36,7 +36,7 @@ export const JoinSection = () => {
         </div>
       </div>
 
-      <div className='mt-20 flex h-[250px] w-full max-w-[450px] flex-col content-between items-center justify-between rounded-card bg-white p-[60px] text-center'>
+      <div className='mt-[80px] flex h-[250px] w-full max-w-[450px] flex-col content-between items-center justify-between rounded-card bg-white p-[60px] text-center max-md:mt-4'>
         <span className='text-3xl text-dark max-sm:pb-6'>
           I got a parking fine
         </span>

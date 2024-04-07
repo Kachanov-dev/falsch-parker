@@ -48,7 +48,7 @@ export const LargeImageWithDesc = ({
 
   return (
     <div className='relative overflow-hidden'>
-      <div className='relative mb-10 mt-5 hidden h-[760px] rounded-card bg-white max-md:h-[580px] md:flex'>
+      <div className='relative hidden h-[760px] rounded-card bg-white max-md:h-[580px] md:flex'>
         <div className='relative h-full w-1/2 overflow-hidden max-md:w-full max-md:pl-0'>
           <Image
             src={image}
@@ -64,7 +64,7 @@ export const LargeImageWithDesc = ({
         <RenderButtons setScreen={setScreen} isTwoScreen={isTwoScreen} />
       </div>
 
-      <div className='relative mb-10 mt-5 hidden h-[760px] rounded-card bg-white max-md:flex max-md:h-[580px] lg:hidden'>
+      <div className='relative hidden h-[760px] rounded-card bg-white max-md:flex max-md:h-[580px] lg:hidden'>
         {isTwoScreen ? (
           <div className='flex h-[760px] w-1/2 items-center justify-center px-10 max-md:h-[580px] max-md:w-full'>
             {descMobile}
