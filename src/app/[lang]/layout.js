@@ -26,6 +26,7 @@ const RootLayout = ({ children, params: { lang } }) => {
         <Header lang={lang} />
         <main className='mt-[75px]'>{children}</main>
         <Footer lang={lang} />
+        <div id='modals'></div>
       </body>
     </html>
   );
