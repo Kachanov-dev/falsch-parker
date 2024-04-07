@@ -9,13 +9,13 @@ const AskForm = () => {
         <SectionTitle title='Ask question' />
       </div>
       <form className='outline-none'>
-        <p className='text-7xl leading-[1.1] max-lg:text-4xl'>
+        <div className='text-7xl leading-[1.1] max-lg:text-4xl'>
           Hello!
           <br />
           My name is <Input placeholder='Enter your name here' />, here is my
           email <Input placeholder='Enter your email here' type='email' />. I
           want to ask <Input fill placeholder='Describe your question here' />
-        </p>
+        </div>
       </form>
     </div>
   );
