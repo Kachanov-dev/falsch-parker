@@ -9,7 +9,7 @@ import { Content } from './components/content';
 const Page = () => {
   return (
     <Container>
-      <div className='my-20 grid gap-y-40 max-md:my-10'>
+      <div className='my-20 grid gap-y-40 max-md:my-10 max-md:gap-y-20'>
         <Heading
           icons={[Refill, Clipboard, Coin]}
           title='Towing service Zurich.'
