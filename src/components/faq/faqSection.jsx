@@ -1,10 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { SectionTitle } from '@/components/sectionTitle/sectionTitle';
 import { Container } from '@/components/container/container';
 import { ArrowDotButton } from '@/components/buttons/arrowDotButton';
 import { FaqList } from './faqList';
+import { Modal } from '@/components/modal/modal';
+import { AskForm } from '@/components/faq/askForm';
 
 const faqList = [
   {
@@ -33,6 +35,8 @@ const faqList = [
 ];
 
 export const FaqSection = () => {
+  const [isOpenAskQuestion, setIsOpenAskQuestion] = useState(false);
+
   return (
     <Container>
       <div className='my-[172px] h-full max-md:my-[100px]'>
@@ -41,7 +45,11 @@ export const FaqSection = () => {
             <SectionTitle title='FAQ' />
           </div>
           <div className='flex w-full justify-end max-sm:hidden'>
-            <ArrowDotButton theme='dark'>Ask your question</ArrowDotButton>
+            <ArrowDotButton
+              onClick={() => setIsOpenAskQuestion(true)}
+              theme='dark'>
+              Ask your question
+            </ArrowDotButton>
           </div>
         </div>
 
@@ -55,9 +63,18 @@ export const FaqSection = () => {
         </div>
 
         <div className='mt-10 hidden w-full justify-center max-sm:flex'>
-          <ArrowDotButton theme='dark'>Ask your question</ArrowDotButton>
+          <ArrowDotButton
+            onClick={() => setIsOpenAskQuestion(true)}
+            theme='dark'>
+            Ask your question
+          </ArrowDotButton>
         </div>
       </div>
+      <Modal
+        isOpen={isOpenAskQuestion}
+        onClose={() => setIsOpenAskQuestion(false)}>
+        <AskForm />
+      </Modal>
     </Container>
   );
 };

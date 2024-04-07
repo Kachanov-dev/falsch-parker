@@ -23,7 +23,7 @@ const ArrowDotButton = ({ href, onClick, children, theme = 'dark' }) => {
       href={href}
       onClick={onClick}
       className={cl(
-        'group relative flex h-[52px] w-fit shrink-0 items-center gap-4 overflow-hidden rounded-full border px-5 transition-colors duration-300',
+        'group relative flex h-[52px] w-fit shrink-0 items-center gap-4 overflow-hidden rounded-full border px-5 outline-none transition-colors duration-300',
         colors[theme]
       )}>
       <ArrowRight className='absolute left-0 -translate-x-full transition-transform duration-300 group-hover:translate-x-4' />
