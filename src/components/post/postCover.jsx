@@ -16,7 +16,7 @@ const PostCover = ({ imageUrl, tag, time, title, synopsis, href, scroll }) => {
             <Chip small>{tag}</Chip>
             <span className='text-base max-lg:text-xs'>{time} min read</span>
           </div>
-          <span className='text-4xl leading-normal max-lg:text-2xl'>
+          <span className='text-4xl leading-tight max-lg:text-2xl'>
             {title}
           </span>
           <p className='pr-14 text-xl font-light opacity-50 max-lg:text-base'>
