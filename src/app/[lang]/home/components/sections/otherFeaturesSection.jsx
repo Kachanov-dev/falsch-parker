@@ -10,18 +10,20 @@ import { CCTVAi } from '@/components/cctv/cctvAi';
 export const OtherFeaturesSection = () => {
   return (
     <Container>
-      <div className='my-[120px]'>
-        <DivideBanner
-          sectionTitles={[
-            'CCTV & AI',
-            'White label solution',
-            'Parking ticket',
-          ]}
-          title='Other features we offer for our clients.'
-          subtitle='Learn how we use AI to help you fine wrong parkers. And discover our white label solution for companies.'
-          images={[VideoCamera, Picture, Blank]}
-        />
-        <div className='mb-5 mt-[100px]'>
+      <div>
+        <div className='my-[172px] max-md:mb-[40px] max-md:mt-[100px]'>
+          <DivideBanner
+            sectionTitles={[
+              'CCTV & AI',
+              'White label solution',
+              'Parking ticket',
+            ]}
+            title='Other features we offer for our clients.'
+            subtitle='Learn how we use AI to help you fine wrong parkers. And discover our white label solution for companies.'
+            images={[VideoCamera, Picture, Blank]}
+          />
+        </div>
+        <div className='mb-5'>
           <CCTVAi />
         </div>
         <ParkingTicketSection />

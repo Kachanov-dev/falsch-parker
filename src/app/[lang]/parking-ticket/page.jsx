@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container } from '@/components/container/container';
 import { FaqSection } from '@/components/faq/faqSection';
-import { LargeImageWithDesc } from '@/components/largeImageWithDesc/largeImageWithDesc';
-import CancelOrder from '@/images/app-page/cancel-order.png';
 import { DivideBanner } from '@/components/divideBanner/divideBanner';
 import BlankIcon from '@/images/global/icons/divideIcons/blank.svg';
 import PortfolioIcon from '@/images/app-page/icons/portfolio.svg';
@@ -15,32 +13,11 @@ import { ParkingManagement } from '@/app/[lang]/parking-ticket/components/parkin
 import { ParkingCards } from '@/app/[lang]/parking-ticket/components/parkingCards';
 import { CCTVAi } from '@/components/cctv/cctvAi';
 import { ReceivedParkingFine } from '@/app/[lang]/parking-ticket/components/ReceivedParkingFine';
+import { CancelOrder } from '@/app/[lang]/parking-ticket/components/cancelOrder';
 
 const ParkingTicketPage = () => {
   return (
     <Container>
-      <LargeImageWithDesc
-        image={CancelOrder}
-        mobileClassesImg='ml-[15%] mt-[10%] object-contain max-md:ml-[10%] max-md:mt-[5%]'
-        desktopClassesImg='ml-[15%] mt-[10%] object-contain max-md:ml-[18%] max-md:mt-[5%]'
-        descDesktop={
-          <div className='flex flex-col justify-between py-5 text-7xl leading-tight	text-dark'>
-            Easy delete{' '}
-            <span className='text-dark/50'>any parking ticket over app.</span>
-          </div>
-        }
-        descMobile={
-          <div className='flex flex-col justify-between py-5 text-2xl text-dark'>
-            <span className='pb-9 text-7xl max-md:text-4xl'>Tow away.</span>
-            <span className='text-xl'>
-              To ensure legal certainty, take a clear photo of the illegally
-              parked vehicle with its license plate visible. Remember, a court
-              prohibition notice is required for compensation claims.
-            </span>
-          </div>
-        }
-      />
-
       <div className='mt-[80px]'>
         <DivideBanner
           title='Execute parking ticket on your business parkings now.'
@@ -70,6 +47,10 @@ const ParkingTicketPage = () => {
       </div>
 
       <CCTVAi />
+
+      <div className='max-md:mt-5 md:mt-[172px]'>
+        <CancelOrder />
+      </div>
 
       <FaqSection />
 

@@ -11,9 +11,9 @@ import { SaveTimeAndMoney } from '@/components/saveTimeAndMoney/saveTimeAndMoney
 export const FuelFraudSection = () => {
   return (
     <Container>
-      <div className='my-[170px]'>
+      <div className='my-[170px] max-md:my-[100px]'>
         <DivideBanner
-          sectionTitles={['Fuel fraud1']}
+          sectionTitles={['Fuel fraud']}
           title='Significantly reduce fuel fraud at gas stations.'
           subtitle='Wrong Parker offers an efficient solution for gas stations to manage and reduce fuel fraud.'
           images={[RefillIcon, CoinIcon, LikeIcon]}

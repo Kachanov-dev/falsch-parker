@@ -34,7 +34,7 @@ const usersInfo = [
 export const TestimonialsSection = () => {
   return (
     <Container>
-      <div className='my-[170px] max-md:my-[100px]'>
+      <div className='mb-[170px] max-md:mb-[100px]'>
         <div className='mb-9'>
           <SectionTitle title='Testimonials' />
         </div>
