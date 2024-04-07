@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from '@/components/container/container';
-import Refill from '@/images/home-page/icons/refill.svg';
-import Coin from '@/images/home-page/icons/coin.svg';
-import Clipboard from '@/images/home-page/icons/clipboard.svg';
+import Refill from '@/images/global/icons/divideIcons/refill.svg';
+import Coin from '@/images/global/icons/divideIcons/coin.svg';
+import Clipboard from '@/images/global/icons/divideIcons/clipboard.svg';
 import { Heading } from './components/heading';
 import { Content } from './components/content';
 

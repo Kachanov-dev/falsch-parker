@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container } from '@/components/container/container';
 import { DivideBanner } from '@/components/divideBanner/divideBanner';
-import RefillIcon from '@/images/home-page/icons/refill.svg';
-import CoinIcon from '@/images/home-page/icons/coin.svg';
-import LikeIcon from '@/images/home-page/icons/like.svg';
+import RefillIcon from '@/images/global/icons/divideIcons/refill.svg';
+import CoinIcon from '@/images/global/icons/divideIcons/coin.svg';
+import LikeIcon from '@/images/global/icons/divideIcons/like.svg';
 import { TheProblemSection } from '@/app/[lang]/home/components/sections/components/fuelFroundSections/theProblemSection';
 import { HowItWorksSection } from '@/app/[lang]/home/components/sections/components/fuelFroundSections/howItWorksSection';
 import { SaveSection } from '@/app/[lang]/home/components/sections/components/fuelFroundSections/saveSection';

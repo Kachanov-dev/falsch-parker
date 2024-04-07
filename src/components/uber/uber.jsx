@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 import UberTowing1 from '@/images/home-page/uber-towing-1.png';
@@ -7,11 +9,11 @@ import { RoundButton } from '@/components/buttons/roundButton';
 import { Cross } from '@/components/icons/cross';
 import { ArrowLeft } from '@/components/icons/arrowLeft';
 
-export const UberSection = () => {
+export const Uber = () => {
   const [isFirstScreen, setIsFirstScreen] = useState(true);
   return (
     <>
-      <div className='relative mt-[170px] h-[700px] w-full overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card max-md:h-[580px]'>
+      <div className='relative h-[700px] w-full overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card max-md:h-[580px]'>
         {isFirstScreen ? (
           <div className='relative h-full w-full'>
             <div className='absolute z-[1] flex flex-col p-[100px] text-8xl text-white max-md:p-10 max-md:text-2xl'>

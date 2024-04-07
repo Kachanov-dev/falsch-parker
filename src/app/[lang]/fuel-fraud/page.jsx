@@ -3,10 +3,21 @@ import { Container } from '@/components/container/container';
 import { FaqSection } from '@/components/faq/faqSection';
 import { LargeImageWithDesc } from '@/components/largeImageWithDesc/largeImageWithDesc';
 import MobileParkingCar from '@/images/home-page/mobil-parking-car.png';
+import { DivideBanner } from '@/components/divideBanner/divideBanner';
+import RefillIcon from '@/images/global/icons/divideIcons/refill.svg';
+import BlankIcon from '@/images/global/icons/divideIcons/blank.svg';
+import CoinIcon from '@/images/global/icons/divideIcons/coin.svg';
 
 const FuelFraudPage = () => {
   return (
     <Container>
+      <div className='my-[170px]'>
+        <DivideBanner
+          title='Report fuel fraud on your gas station.'
+          subtitle='Submit fuel fraud reports for your gas station and secure refunds effortlessly with our automated processing system.'
+          images={[RefillIcon, BlankIcon, CoinIcon]}
+        />
+      </div>
       <LargeImageWithDesc
         image={MobileParkingCar}
         mobileClassesImg='ml-[16%] mt-[10%] object-contain max-md:ml-[16%] max-md:mt-[5%]'

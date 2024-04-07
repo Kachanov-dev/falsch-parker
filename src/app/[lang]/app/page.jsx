@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container } from '@/components/container/container';
 import { DivideBanner } from '@/components/divideBanner/divideBanner';
-import BlankIcon from '@/images/home-page/icons/blank.svg';
+import BlankIcon from '@/images/global/icons/divideIcons/blank.svg';
 import PortfolioIcon from '@/images/app-page/icons/portfolio.svg';
 import { NoParking } from '@/components/noParking/noParking';
 import { Claim } from '@/components/claim/claim';

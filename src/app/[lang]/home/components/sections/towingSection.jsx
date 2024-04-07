@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container } from '@/components/container/container';
 import { DivideBanner } from '@/components/divideBanner/divideBanner';
-import EyeIcon from '@/images/home-page/icons/eye.svg';
-import PhotoIcon from '@/images/home-page/icons/photo.svg';
-import Towing from '@/images/home-page/icons/towing.svg';
-import { UberSection } from '@/app/[lang]/home/components/sections/components/towingSections/uberSection';
+import EyeIcon from '@/images/global/icons/divideIcons/eye.svg';
+import PhotoIcon from '@/images/global/icons/divideIcons/photo.svg';
+import Towing from '@/images/global/icons/divideIcons/towing.svg';
 import { HowItWorksSection } from '@/app/[lang]/home/components/sections/components/towingSections/howItWorksSection';
 import { TrackTowingSection } from '@/app/[lang]/home/components/sections/components/towingSections/trackTowingSection';
+import { Uber } from '@/components/uber/uber';
 
 export const TowingSection = () => {
   return (
@@ -19,7 +19,7 @@ export const TowingSection = () => {
           images={[EyeIcon, PhotoIcon, Towing]}
         />
       </div>
-      <UberSection />
+      <Uber />
       <HowItWorksSection />
       <TrackTowingSection />
     </Container>

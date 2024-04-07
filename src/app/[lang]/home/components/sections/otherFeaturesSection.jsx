@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container } from '@/components/container/container';
 import { DivideBanner } from '@/components/divideBanner/divideBanner';
-import VideoCamera from '@/images/home-page/icons/videoСamera.svg';
-import Picture from '@/images/home-page/icons/picture.svg';
-import Blank from '@/images/home-page/icons/blank.svg';
+import VideoCamera from '@/images/global/icons/divideIcons/videoСamera.svg';
+import Picture from '@/images/global/icons/divideIcons/picture.svg';
+import Blank from '@/images/global/icons/divideIcons/blank.svg';
 import { ParkingTicketSection } from '@/app/[lang]/home/components/sections/components/otherFeaturesSection/parkingTicketSection';
 import { CCTVAi } from '@/components/cctv/cctvAi';
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container } from '@/components/container/container';
-import EyeIcon from '@/images/home-page/icons/eye.svg';
-import FormIcon from '@/images/home-page/icons/form.svg';
-import MarkIcon from '@/images/home-page/icons/mark.svg';
-import PhotoIcon from '@/images/home-page/icons/photo.svg';
+import EyeIcon from '@/images/global/icons/divideIcons/eye.svg';
+import FormIcon from '@/images/global/icons/divideIcons/form.svg';
+import MarkIcon from '@/images/global/icons/divideIcons/mark.svg';
+import PhotoIcon from '@/images/global/icons/divideIcons/photo.svg';
 import { DivideBanner } from '@/components/divideBanner/divideBanner';
 import { NoParking } from '@/components/noParking/noParking';
 
