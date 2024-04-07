@@ -43,7 +43,7 @@ export const OurServices = () => {
   };
 
   return (
-    <div className='h-[700px] w-full overflow-hidden'>
+    <div className='h-full w-full overflow-hidden'>
       <div className='relative flex h-[700px] w-full overflow-hidden rounded-bl-card rounded-tl-card rounded-tr-card max-lg:hidden'>
         <div className='absolute z-[2] flex h-full flex-col justify-center pl-[100px] pr-[50px] text-2xl text-dark max-xl:w-[50%] lg:w-[50%] xl:w-[60%]'>
           <span className='pb-9 text-7xl max-xl:text-6xl'>Our services.</span>
@@ -66,7 +66,7 @@ export const OurServices = () => {
         <RenderButtons setScreen={setScreen} isTwoScreen={isTwoScreen} />
       </div>
 
-      <div className='relative mb-10 mt-5 hidden h-[580px] max-lg:flex lg:hidden'>
+      <div className='relative hidden h-[580px] max-lg:flex lg:hidden'>
         {isTwoScreen ? (
           <div className='flex h-[760px] w-full  items-center justify-center rounded-card bg-white px-10 max-md:h-[580px] max-md:w-full'>
             <div className='flex flex-col justify-between py-5 text-2xl text-dark'>
