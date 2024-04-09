@@ -7,22 +7,12 @@ import { ParkingCardApp } from '@/components/cards/parkingCardApp';
 import { Container } from '@/components/container/container';
 import { MainOpenAppShape } from '@/app/[lang]/home/components/sections/components/mainOpenAppShape';
 import MainBanner from '@/images/home-page/main-banner.png';
-import { useRouter } from 'next/navigation';
 import styles from './styles.module.scss';
 import cl from 'classnames';
 
 export const MainSection = ({ scrollTo }) => {
-  const router = useRouter();
-  const gotToBusinessParking = () => {
-    router.push('/app');
-  };
-
-  const gotToPrivateParking = () => {
-    router.push('/app');
-  };
-
-  const gotToApp = () => {
-    router.push('/app');
+  const openApp = () => {
+    window.open('https://app.falsch-parker.ch/', '_blank');
   };
 
   return (
@@ -44,7 +34,7 @@ export const MainSection = ({ scrollTo }) => {
           )}>
           <ParkingCard
             type='businessParking'
-            onClick={gotToBusinessParking}
+            onClick={openApp}
             text={
               <div className=''>
                 Wrong parkers on your <br />
@@ -56,7 +46,7 @@ export const MainSection = ({ scrollTo }) => {
           />
           <ParkingCard
             type='privateParking'
-            onClick={gotToPrivateParking}
+            onClick={openApp}
             text={
               <div>
                 Wrong parkers on your <br />
@@ -67,7 +57,7 @@ export const MainSection = ({ scrollTo }) => {
             }
           />
           <ParkingCardApp
-            onClick={gotToApp}
+            onClick={openApp}
             text={
               <div className='text-3xl text-white	'>
                 <span className='text-green'>Open app </span> to <br /> get all

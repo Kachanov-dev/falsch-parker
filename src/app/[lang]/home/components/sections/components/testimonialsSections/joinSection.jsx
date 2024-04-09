@@ -1,8 +1,14 @@
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { PayFineButton } from '@/components/buttons/payFineButton';
 import { ArrowDotButton } from '@/components/buttons/arrowDotButton';
 
 export const JoinSection = () => {
+  const router = useRouter();
+  const goToContactUs = () => {
+    router.push('/contact');
+  };
+
   return (
     <div className='flex h-full w-full flex-col items-center'>
       <div className='flex w-full flex-col content-between justify-between rounded-card bg-green p-20 text-white max-md:h-[580px] max-sm:p-6 md:h-[760px]'>
@@ -30,7 +36,9 @@ export const JoinSection = () => {
           <span className='text-[240px] leading-[0.75] max-lg:text-[180px] max-md:text-[120px] max-sm:py-3'>
             Join
           </span>
-          <div className='flex w-full max-sm:justify-center sm:items-end sm:justify-end'>
+          <div
+            className='flex w-full max-sm:justify-center sm:items-end sm:justify-end'
+            onClick={goToContactUs}>
             <ArrowDotButton theme='light'>Contact us</ArrowDotButton>
           </div>
         </div>

@@ -11,7 +11,7 @@ export const ReceivedParkingFine = () => {
         <span className='pb-[30px] text-center text-3xl'>
           I received a parking fine.
         </span>
-        <div className='flex items-center justify-center  gap-5 max-md:flex-col'>
+        <div className='flex items-center justify-center gap-5 max-md:flex-col'>
           <PayFineButton text='Pay fine' />
           <ArrowDotButton theme='dark'>Open complaint</ArrowDotButton>
         </div>

@@ -22,7 +22,7 @@ export const footerLinks = [
   {
     title: 'About us',
     links: [
-      { title: 'FAQ', href: '/' },
+      { title: 'FAQ' },
       { title: 'Terms & Conditions', href: '/' },
       { title: 'Imprint', href: '/' },
       { title: 'Data protection', href: '/' },
